@@ -1,13 +1,15 @@
 package io.github.henrique0120.libraryapi.model;
 
-import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
+import jakarta.persistence.*;
+import lombok.Data;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
 @Table(name = "livro")
+@Data
 public class Livro {
 
     @Id
@@ -24,11 +26,12 @@ public class Livro {
     @Column(name = "data_Publicao", nullable = false)
     private LocalDate dataPublicacao;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "genero", length = 30, nullable = false)
-    private String genero;
+    private GeneroLivro genero;
 
     @Column(name = "preco", precision = 18, scale = 2)
-    private Double preco;
+    private BigDecimal preco;
 
     @ManyToOne
     @JoinColumn(name = "id_autor")
