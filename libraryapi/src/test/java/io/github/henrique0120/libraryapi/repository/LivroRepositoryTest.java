@@ -42,6 +42,28 @@ class LivroRepositoryTest {
     }
 
     @Test
+    void salvarAutorELivroTest(){
+
+        Livro livro = new Livro();
+        livro.setIsbn("1234567891023");
+        livro.setPreco(BigDecimal.valueOf(50));
+        livro.setGenero(GeneroLivro.CIENCIA);
+        livro.setTitulo("Biblia");
+        livro.setDataPublicacao(LocalDate.ofEpochDay(16/5/2026));
+
+        Autor autor = new Autor();
+        autor.setNome("João");
+        autor.setNacionalidade("Pará");
+        autor.setDataNascimento(LocalDate.of(1983, 7, 10));
+
+        autorRepository.save(autor);
+
+        livro.setAutor(autor);
+
+        repository.save(livro);
+    }
+
+    @Test
     void salvarCascadeTest(){
 
         Livro livro = new Livro();
@@ -61,4 +83,30 @@ class LivroRepositoryTest {
         repository.save(livro);
     }
 
+    @Test
+    void atualizarAutorDoLivro(){
+        UUID id = UUID.fromString("cf0b7de2-16ed-4040-9c3f-182e43f683f3");
+        var livroParaAtualizar = repository.findById(id).orElse(null);
+
+        UUID idAutor = UUID.fromString("0b680d93-0cc1-457e-a9de-15403f49ae59");
+        Autor jesus = autorRepository.findById(idAutor).orElse(null);
+
+        livroParaAtualizar.setAutor(jesus);
+
+        repository.save(livroParaAtualizar);
+    }
+
+    @Test
+    void deletar(){
+        //desabilitar cascade na entidade
+        UUID id = UUID.fromString("cf0b7de2-16ed-4040-9c3f-182e43f683f3");
+        repository.deleteById(id);
+    }
+
+    @Test
+    void deletarCascade(){
+        //habilitar cascade na entidade
+        UUID id = UUID.fromString("cf0b7de2-16ed-4040-9c3f-182e43f683f3");
+        repository.deleteById(id);
+    }
 }
