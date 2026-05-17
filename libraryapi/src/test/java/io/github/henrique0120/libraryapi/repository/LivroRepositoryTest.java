@@ -6,6 +6,7 @@ import io.github.henrique0120.libraryapi.model.Livro;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -52,9 +53,9 @@ class LivroRepositoryTest {
         livro.setDataPublicacao(LocalDate.ofEpochDay(16/5/2026));
 
         Autor autor = new Autor();
-        autor.setNome("João");
-        autor.setNacionalidade("Pará");
-        autor.setDataNascimento(LocalDate.of(1983, 7, 10));
+        autor.setNome("Jesus Cristo");
+        autor.setNacionalidade("Belém");
+        autor.setDataNascimento(LocalDate.of(1, 12, 25));
 
         autorRepository.save(autor);
 
@@ -109,4 +110,17 @@ class LivroRepositoryTest {
         UUID id = UUID.fromString("cf0b7de2-16ed-4040-9c3f-182e43f683f3");
         repository.deleteById(id);
     }
+
+    @Test
+    //transactional serve para fazer mais uma consulta no banco para carregar os dados que você precisa
+    //quando o fetch estiver como LAZY
+    @Transactional
+    void buscarLivroTest(){
+        UUID id = UUID.fromString("579dbcfa-3b6e-4be5-99b8-8a319c0c7e59");
+        Livro livro = repository.findById(id).orElse(null);
+        System.out.println(livro.getTitulo());
+        System.out.println(livro.getAutor().getNome());
+    }
+
+
 }
