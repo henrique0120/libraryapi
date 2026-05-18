@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Optional;
+import java.util.List;
 import java.util.UUID;
 
 @SpringBootTest
@@ -46,16 +46,16 @@ class LivroRepositoryTest {
     void salvarAutorELivroTest(){
 
         Livro livro = new Livro();
-        livro.setIsbn("1234567891023");
-        livro.setPreco(BigDecimal.valueOf(50));
+        livro.setIsbn("0394928839454");
+        livro.setPreco(BigDecimal.valueOf(100));
         livro.setGenero(GeneroLivro.CIENCIA);
-        livro.setTitulo("Biblia");
-        livro.setDataPublicacao(LocalDate.ofEpochDay(16/5/2026));
+        livro.setTitulo("O mito de UFO");
+        livro.setDataPublicacao(LocalDate.ofEpochDay(21/9/2025));
 
         Autor autor = new Autor();
-        autor.setNome("Jesus Cristo");
-        autor.setNacionalidade("Belém");
-        autor.setDataNascimento(LocalDate.of(1, 12, 25));
+        autor.setNome("Stephen Hawking");
+        autor.setNacionalidade("Reino Unido");
+        autor.setDataNascimento(LocalDate.of(1946, 12, 25));
 
         autorRepository.save(autor);
 
@@ -120,6 +120,30 @@ class LivroRepositoryTest {
         Livro livro = repository.findById(id).orElse(null);
         System.out.println(livro.getTitulo());
         System.out.println(livro.getAutor().getNome());
+    }
+
+    @Test
+    void buscarLivroByName(){
+
+        List<Livro> byName = repository.findByTitulo("UFO");
+        byName.forEach(System.out::println);
+
+    }
+    @Test
+    void buscarLivroByISBN(){
+
+        List<Livro> byISBN = repository.findByIsbn("1234982739023");
+        byISBN.forEach(System.out::println);
+
+    }
+    @Test
+    void buscarLivroByTituloIsbn(){
+        var title = "UFO";
+        var isbn = "098567543678456";
+
+        List<Livro> byISBN = repository.findByTituloIsbn(title, isbn);
+        byISBN.forEach(System.out::println);
+
     }
 
 
