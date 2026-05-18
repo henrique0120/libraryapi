@@ -3,6 +3,8 @@ package io.github.henrique0120.libraryapi.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -10,6 +12,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "livro")
 @Data
+@ToString(exclude = "autor")
 public class Livro {
 
     @Id
@@ -37,6 +40,8 @@ public class Livro {
     // cascade = CascadeType.ALL
             //eager(padrão) = traz os dados do autor
             //lazy não traz os dados do autor
+
+            //sempre usar fetch do tipo lazy como boa prática
         fetch = FetchType.LAZY
      )
     @JoinColumn(name = "id_autor")

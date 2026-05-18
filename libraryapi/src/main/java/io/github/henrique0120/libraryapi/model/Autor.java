@@ -13,7 +13,7 @@ import java.util.UUID;
 @Table(name = "autor", schema = "public")
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"livros"})
 public class Autor {
 
     @Id
@@ -30,6 +30,9 @@ public class Autor {
     @Column(name="nacionalidade", length = 50, nullable = false)
     private String nacionalidade;
 
-    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "autor"
+            //sempre usar fetch do tipo lazy como boa prática
+            //fetch = FetchType.LAZY
+     )
     private List<Livro> livros;
 }
