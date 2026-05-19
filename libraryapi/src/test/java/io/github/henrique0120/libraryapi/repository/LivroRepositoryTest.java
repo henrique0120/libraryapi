@@ -129,6 +129,13 @@ class LivroRepositoryTest {
         byName.forEach(System.out::println);
 
     }
+
+    @Test
+    void buscarLivroByTituloLike(){
+        List<Livro> byTituloLike = repository.findByTituloLike("%UFO%");
+        byTituloLike.forEach(System.out::println);
+    }
+
 //    @Test
 //    void buscarLivroByISBN(){
 //
@@ -136,15 +143,39 @@ class LivroRepositoryTest {
 //        byISBN.forEach(System.out::println);
 //
 //    }
+
     @Test
     void buscarLivroByTituloIsbn(){
         var title = "UFO";
-        var isbn = "0394928839454";
+        var isbn = "098567543678456";
 
         List<Livro> byISBN = repository.findByTituloAndIsbn(title, isbn);
         byISBN.forEach(System.out::println);
 
     }
 
+    //JPQL
+    @Test
+    void buscarLivrosPorTituloAndPreco(){
+        List<Livro> livros = repository.listarLivrosOrdenadosPorTituloAndPreco();
+        livros.forEach(System.out::println);
+    }
 
+    @Test
+    void listarAutoresDosLivros(){
+        List<Autor> autors = repository.listarAutoresDosLivros();
+        autors.forEach(System.out::println);
+    }
+
+    @Test
+    void listarTitulosNaoRepetidosDosLivros(){
+        var resultado  = repository.listarNomesDiferentesLivros();
+        resultado.forEach(System.out::println);
+    }
+
+    @Test
+    void listarGenerosDeLivrosDeAutoresBritanicos(){
+        var resultado  = repository.listarGenerosAutoresBritanicos();
+        resultado.forEach(System.out::println);
+    }
 }

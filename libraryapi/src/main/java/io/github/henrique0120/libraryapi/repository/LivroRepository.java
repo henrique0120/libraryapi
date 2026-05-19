@@ -3,10 +3,15 @@ package io.github.henrique0120.libraryapi.repository;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * @see LivroRepositoryTest
+ */
 
 @Repository
 public interface LivroRepository extends JpaRepository<Livro, UUID> {
@@ -26,4 +31,28 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
 
     //select * from livro where titulo = ? or isbn = ?
     List<Livro> findByTituloOrIsbn(String titulo, String isbn);
+
+    List<Livro> findByTituloLike(String titulo);
+
+    //JPQL -> referencia as entidades e as propriedades
+    // select l.* from livro as l order by l.titulo
+    @Query("select l from Livro as l order by l.titulo, l.preco")
+    List<Livro> listarLivrosOrdenadosPorTituloAndPreco();
+
+    //select a.* from livro l join autor a on a.id = l.id_autor
+    @Query("select a from Livro l join l.autor a")
+    List<Autor> listarAutoresDosLivros();
+
+    //select distinct l.* from livro l
+    @Query("select distinct l.titulo from Livro l")
+    List<String> listarNomesDiferentesLivros();
+
+    @Query("""
+        select l.genero
+        from Livro l
+        join l.autor a
+        where a.nacionalidade = 'Reino Unido'
+        order by l.genero
+    """)
+    List<String> listarGenerosAutoresBritanicos();
 }
