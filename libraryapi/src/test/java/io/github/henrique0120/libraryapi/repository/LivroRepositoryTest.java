@@ -49,7 +49,7 @@ class LivroRepositoryTest {
         livro.setIsbn("0394928839454");
         livro.setPreco(BigDecimal.valueOf(100));
         livro.setGenero(GeneroLivro.CIENCIA);
-        livro.setTitulo("O mito de UFO");
+        livro.setTitulo("UFO");
         livro.setDataPublicacao(LocalDate.ofEpochDay(21/9/2025));
 
         Autor autor = new Autor();
@@ -129,19 +129,19 @@ class LivroRepositoryTest {
         byName.forEach(System.out::println);
 
     }
-    @Test
-    void buscarLivroByISBN(){
-
-        List<Livro> byISBN = repository.findByIsbn("1234982739023");
-        byISBN.forEach(System.out::println);
-
-    }
+//    @Test
+//    void buscarLivroByISBN(){
+//
+//        List<Livro> byISBN = repository.findByIsbn("1234982739023");
+//        byISBN.forEach(System.out::println);
+//
+//    }
     @Test
     void buscarLivroByTituloIsbn(){
         var title = "UFO";
-        var isbn = "098567543678456";
+        var isbn = "0394928839454";
 
-        List<Livro> byISBN = repository.findByTituloIsbn(title, isbn);
+        List<Livro> byISBN = repository.findByTituloAndIsbn(title, isbn);
         byISBN.forEach(System.out::println);
 
     }

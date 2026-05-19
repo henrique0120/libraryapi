@@ -18,7 +18,12 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     //select * from livro where titulo = titulo
     List<Livro> findByTitulo(String titulo);
 
+    //select * from livro where isbn = ?
     List<Livro> findByIsbn(String isbn);
 
-    List<Livro> findByTituloIsbn(String titulo, String isbn);
+    //select * from livro where titulo = ? and preco = ?
+    List<Livro> findByTituloAndIsbn(String titulo, String isbn);
+
+    //select * from livro where titulo = ? or isbn = ?
+    List<Livro> findByTituloOrIsbn(String titulo, String isbn);
 }

@@ -30,9 +30,9 @@ public class Autor {
     @Column(name="nacionalidade", length = 50, nullable = false)
     private String nacionalidade;
 
-    @OneToMany(mappedBy = "autor"
+    @OneToMany(mappedBy = "autor",
             //sempre usar fetch do tipo lazy como boa prática
-            //fetch = FetchType.LAZY
+            fetch = FetchType.LAZY
      )
     private List<Livro> livros;
 }
