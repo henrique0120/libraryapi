@@ -1,9 +1,11 @@
 package io.github.henrique0120.libraryapi.repository;
 
 import io.github.henrique0120.libraryapi.model.Autor;
+import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -34,6 +36,8 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
 
     List<Livro> findByTituloLike(String titulo);
 
+
+
     //JPQL -> referencia as entidades e as propriedades
     // select l.* from livro as l order by l.titulo
     @Query("select l from Livro as l order by l.titulo, l.preco")
@@ -55,4 +59,14 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
         order by l.genero
     """)
     List<String> listarGenerosAutoresBritanicos();
+
+    //O Query Method pode sobrescrever a consulta comum
+    //named parameters -> parametros nomeados
+    @Query("select l from Livro l where l.genero = :genero order by :paramOrdenacao")
+    List<Livro> findByGenero( @Param("genero") GeneroLivro generoLivro,
+                              @Param("paramOrdenacao") String nomePropriedade);
+
+    //positional parameters
+    @Query("select l from Livro l where l.genero = ?1 order by ?2")
+    List<Livro> findByGeneroPositionalParameters(GeneroLivro generoLivro, String nomePropriedade);
 }

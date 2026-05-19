@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @SpringBootTest
@@ -98,6 +99,14 @@ class LivroRepositoryTest {
     }
 
     @Test
+    void atualizarDataPublicacao(){
+        UUID id = UUID.fromString("62807f4d-09bc-4486-8bef-8971b4d7852a");
+        var byId = repository.findById(id).get();
+        byId.setDataPublicacao(LocalDate.of(1983, 9, 10));
+        repository.save(byId);
+    }
+
+    @Test
     void deletar(){
         //desabilitar cascade na entidade
         UUID id = UUID.fromString("cf0b7de2-16ed-4040-9c3f-182e43f683f3");
@@ -178,4 +187,21 @@ class LivroRepositoryTest {
         var resultado  = repository.listarGenerosAutoresBritanicos();
         resultado.forEach(System.out::println);
     }
+
+    @Test
+    void listarPorGeneroQueryParamTest(){
+        var resultado  = repository.findByGenero(GeneroLivro.CIENCIA, "dataPublicacao");
+        resultado.forEach(System.out::println);
+    }
+
+    @Test
+    void listarPorGeneroPositionalParamTest(){
+        var resultado  = repository.findByGeneroPositionalParameters(GeneroLivro.CIENCIA, "dataPublicacao");
+        resultado.forEach(System.out::println);
+    }
+
+
+
+
+
 }
