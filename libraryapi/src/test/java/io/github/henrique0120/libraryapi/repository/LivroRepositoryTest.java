@@ -200,7 +200,15 @@ class LivroRepositoryTest {
         resultado.forEach(System.out::println);
     }
 
+    @Test
+    void deleteByGenero(){
+        repository.deleteByGenero(GeneroLivro.MISTERIO);
+    }
 
+    @Test
+    void updateDataPublicacaoTest(){
+        repository.updateDataPublicacao(LocalDate.of(2000, 1, 1));
+    }
 
 
 

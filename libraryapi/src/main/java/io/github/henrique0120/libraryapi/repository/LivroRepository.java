@@ -4,10 +4,13 @@ import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -69,4 +72,16 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     //positional parameters
     @Query("select l from Livro l where l.genero = ?1 order by ?2")
     List<Livro> findByGeneroPositionalParameters(GeneroLivro generoLivro, String nomePropriedade);
+
+    //@Modifying significa que eu vou fazer alterações e não só realizar leituras no banco
+    @Modifying
+    @Transactional
+    @Query("delete from Livro where genero = ?1")
+    void deleteByGenero(GeneroLivro genero);
+
+    @Modifying
+    @Transactional
+    //sempre fazer a query com where
+    @Query("update Livro set dataPublicacao = ?1")
+    void updateDataPublicacao(LocalDate localDate);
 }
