@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.UUID;
-
 
 @RestController
 @RequestMapping("autores")
@@ -23,7 +21,7 @@ public class AutorController {
 
     @PostMapping
     public ResponseEntity<Void> register(@RequestBody AutorDTO autor){
-        var autorEntidade = autor.mapearParaAutor();
+        Autor autorEntidade = autor.mapearParaAutor();
         service.salvar(autorEntidade);
 
         URI location = ServletUriComponentsBuilder
@@ -34,6 +32,4 @@ public class AutorController {
 
         return ResponseEntity.created(location).build();
     }
-
-
 }
