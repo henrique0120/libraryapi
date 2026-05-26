@@ -1,5 +1,6 @@
 package io.github.henrique0120.libraryapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +40,7 @@ public class Autor {
             //sempre usar fetch do tipo lazy como boa prática
             fetch = FetchType.LAZY
      )
+    @JsonIgnore
     private List<Livro> livros;
 
     @CreatedDate
