@@ -19,6 +19,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString(exclude = {"livros"})
+//para @CreatedDate e @LastModifiedDate funcionarem
 @EntityListeners(AuditingEntityListener.class)
 public class Autor {
 
@@ -40,7 +41,7 @@ public class Autor {
             //sempre usar fetch do tipo lazy como boa prática
             fetch = FetchType.LAZY
      )
-    @JsonIgnore
+    //@JsonIgnore
     private List<Livro> livros;
 
     @CreatedDate
