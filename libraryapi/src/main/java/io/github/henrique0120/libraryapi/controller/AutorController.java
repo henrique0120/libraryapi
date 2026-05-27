@@ -82,8 +82,18 @@ public class AutorController {
                         autor.getNacionalidade())
                 ).collect(Collectors.toList());
                 return ResponseEntity.ok(lista);
+    }
+
+    @PutMapping("{id}")
+    public Autor update(@PathVariable("id") String id, @RequestBody Autor autor){
+        var cod = UUID.fromString(id);
+
 
     }
+
+
+
+
 
 
 }

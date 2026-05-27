@@ -41,4 +41,17 @@ public class AutorService {
         return repository.findAll();
     }
 
+    public Autor update (UUID id, Autor autor) {
+        var user = obterPorId(id);
+        if (user.isPresent()) {
+            Autor encontrado = user.get();
+            encontrado.setNome(autor.getNome());
+            encontrado.setDataNascimento(autor.getDataNascimento());
+            encontrado.setNacionalidade(autor.getNacionalidade());
+            return autor;
+        }
+
+        return autor;
+    }
+
 }
