@@ -3,6 +3,7 @@ package io.github.henrique0120.libraryapi.service;
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +23,13 @@ public class AutorService {
         return repository.save(autor);
     }
 
+    public void update(Autor autor){
+        if(autor.getId() == null){
+            throw new IllegalArgumentException("Para atualizar, é necessário que o autor esteja cadastrado no banco.");
+        }
+        repository.save(autor);
+    }
+
     public Optional<Autor> obterPorId(UUID id){
         return repository.findById(id);
     }
@@ -39,19 +47,6 @@ public class AutorService {
             return repository.findByNacionalidade(nacionalidade);
         }
         return repository.findAll();
-    }
-
-    public Autor update (UUID id, Autor autor) {
-        var user = obterPorId(id);
-        if (user.isPresent()) {
-            Autor encontrado = user.get();
-            encontrado.setNome(autor.getNome());
-            encontrado.setDataNascimento(autor.getDataNascimento());
-            encontrado.setNacionalidade(autor.getNacionalidade());
-            return autor;
-        }
-
-        return autor;
     }
 
 }

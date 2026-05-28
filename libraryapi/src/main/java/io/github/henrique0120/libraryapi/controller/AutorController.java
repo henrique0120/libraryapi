@@ -85,15 +85,20 @@ public class AutorController {
     }
 
     @PutMapping("{id}")
-    public Autor update(@PathVariable("id") String id, @RequestBody Autor autor){
-        var cod = UUID.fromString(id);
+    public ResponseEntity<String> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
+        Optional<Autor> autorConsulta = service.obterPorId(id);
 
+        if (autorConsulta.isEmpty()){
+            return ResponseEntity.unprocessableContent().build();
+        }
 
+        Autor entidade = autorConsulta.get();
+        entidade.setNome(autor.nome());
+        entidade.setDataNascimento(autor.dataNascimento());
+        entidade.setNacionalidade(autor.nacionalidade());
+
+        service.update(entidade);
+
+        return ResponseEntity.noContent().build();
     }
-
-
-
-
-
-
 }
