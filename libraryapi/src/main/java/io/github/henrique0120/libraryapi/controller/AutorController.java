@@ -4,6 +4,7 @@ import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
 import io.github.henrique0120.libraryapi.controller.dto.ErroResposta;
 import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
+import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.service.AutorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
