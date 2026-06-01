@@ -1,12 +1,11 @@
 package io.github.henrique0120.libraryapi.controller;
 
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
+import io.github.henrique0120.libraryapi.controller.dto.ErroResposta;
+import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.service.AutorService;
 import lombok.AllArgsConstructor;
-import org.apache.catalina.connector.Response;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,17 +24,22 @@ public class AutorController {
     private final AutorService service;
 
     @PostMapping
-    public ResponseEntity<Void> register(@RequestBody AutorDTO autor) {
-        Autor autorEntidade = autor.mapearParaAutor();
-        service.salvar(autorEntidade);
+    public ResponseEntity<Object> register(@RequestBody AutorDTO autor) {
+        try {
+            Autor autorEntidade = autor.mapearParaAutor();
+            service.salvar(autorEntidade);
 
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(autorEntidade.getId())
-                .toUri();
+            URI location = ServletUriComponentsBuilder
+                    .fromCurrentRequest()
+                    .path("/{id}")
+                    .buildAndExpand(autorEntidade.getId())
+                    .toUri();
 
-        return ResponseEntity.created(location).build();
+            return ResponseEntity.created(location).build();
+        }catch (RegistroDuplicadoException e){
+            var erroDTO = ErroResposta.conflito(e.getMessage());
+            return ResponseEntity.status(erroDTO.status()).body(erroDTO);
+        }
     }
 
     @GetMapping("{id}")
@@ -55,18 +59,18 @@ public class AutorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deletar(@PathVariable("id") String id) {
-        var idAutor = UUID.fromString(id);
-        Optional<Autor> autorOptional = service.obterPorId(idAutor);
+    public ResponseEntity<String> deletar(@PathVariable("id") String id) {
+            var idAutor = UUID.fromString(id);
+            Optional<Autor> autorOptional = service.obterPorId(idAutor);
 
-        if (autorOptional.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            if (autorOptional.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            service.deletar(autorOptional.get());
+
+            return ResponseEntity.noContent().build();
         }
-
-        service.deletar(autorOptional.get());
-
-        return ResponseEntity.noContent().build();
-    }
 
     @GetMapping
     public ResponseEntity<List<AutorDTO>> search(
@@ -85,20 +89,25 @@ public class AutorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<String> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
-        Optional<Autor> autorConsulta = service.obterPorId(id);
+    public ResponseEntity<Object> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
+        try {
+            Optional<Autor> autorConsulta = service.obterPorId(id);
 
-        if (autorConsulta.isEmpty()){
-            return ResponseEntity.unprocessableContent().build();
+            if (autorConsulta.isEmpty()) {
+                return ResponseEntity.unprocessableContent().build();
+            }
+
+            Autor entidade = autorConsulta.get();
+            entidade.setNome(autor.nome());
+            entidade.setDataNascimento(autor.dataNascimento());
+            entidade.setNacionalidade(autor.nacionalidade());
+
+            service.update(entidade);
+
+            return ResponseEntity.noContent().build();
+        }catch (RegistroDuplicadoException e){
+            var erroDTO = ErroResposta.conflito(e.getMessage());
+            return ResponseEntity.status(erroDTO.status()).body(erroDTO);
         }
-
-        Autor entidade = autorConsulta.get();
-        entidade.setNome(autor.nome());
-        entidade.setDataNascimento(autor.dataNascimento());
-        entidade.setNacionalidade(autor.nacionalidade());
-
-        service.update(entidade);
-
-        return ResponseEntity.noContent().build();
     }
 }

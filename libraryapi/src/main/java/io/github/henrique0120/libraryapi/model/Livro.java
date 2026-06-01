@@ -4,9 +4,12 @@ package io.github.henrique0120.libraryapi.model;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -26,7 +29,7 @@ public class Livro {
     @Column(name = "titulo", length = 150, nullable = false)
     private String titulo;
 
-    @Column(name = "data_publicacao", nullable = false)
+    @Column(name = "data_publicacao")
     private LocalDate dataPublicacao;
 
     @Enumerated(EnumType.STRING)
@@ -47,5 +50,14 @@ public class Livro {
     @JoinColumn(name = "id_autor")
     private Autor autor;
 
+    @CreatedDate
+    @Column(name = "data_cadastro")
+    private LocalDateTime dataCadastro;
 
+    @LastModifiedDate
+    @Column(name = "data_atualizacao")
+    private LocalDateTime dataAutalização;
+
+    @Column(name = "id_usuario")
+    private UUID idUsuario;
 }

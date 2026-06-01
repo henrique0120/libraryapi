@@ -1,8 +1,11 @@
 package io.github.henrique0120.libraryapi.service;
 
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
+import io.github.henrique0120.libraryapi.exceptions.OperacaoNaoPermitidaException;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
+import io.github.henrique0120.libraryapi.repository.LivroRepository;
+import io.github.henrique0120.libraryapi.validator.AutorValidator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -14,16 +17,22 @@ import java.util.UUID;
 public class AutorService {
 
     private final AutorRepository repository;
+    private final AutorValidator validator;
+    private final LivroRepository livroRepository;
 
-    public AutorService(AutorRepository repository){
+    public AutorService(AutorRepository repository, AutorValidator validator, LivroRepository livroRepository) {
         this.repository = repository;
+        this.validator = validator;
+        this.livroRepository = livroRepository;
     }
 
     public Autor salvar(Autor autor){
+        validator.validar(autor);
         return repository.save(autor);
     }
 
     public void update(Autor autor){
+        validator.validar(autor);
         if(autor.getId() == null){
             throw new IllegalArgumentException("Para atualizar, é necessário que o autor esteja cadastrado no banco.");
         }
@@ -35,6 +44,10 @@ public class AutorService {
     }
 
     public void deletar(Autor autor){
+        if(possuiLivro(autor)){
+            throw new OperacaoNaoPermitidaException(
+                    "Não é possível excluir um Autor que possui livros cadastrados!");
+        }
         repository.delete(autor);
     }
 
@@ -47,6 +60,10 @@ public class AutorService {
             return repository.findByNacionalidade(nacionalidade);
         }
         return repository.findAll();
+    }
+
+    public boolean possuiLivro(Autor autor){
+        return livroRepository.existsByAutor(autor);
     }
 
 }
