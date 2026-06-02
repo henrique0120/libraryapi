@@ -35,7 +35,7 @@ class LivroRepositoryTest {
 
 
         Autor autor = autorRepository
-                .findById(UUID.fromString("0b680d93-0cc1-457e-a9de-15403f49ae59"))
+                .findById(UUID.fromString("6b2bbbd4-885a-4353-81e6-0c7f15e074bf"))
                 .orElse(null);
 
         livro.setAutor(autor);

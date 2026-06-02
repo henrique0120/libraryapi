@@ -2,11 +2,13 @@ package io.github.henrique0120.libraryapi.controller;
 
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
 import io.github.henrique0120.libraryapi.controller.dto.ErroResposta;
+import io.github.henrique0120.libraryapi.exceptions.LivroAutorException;
 import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.service.AutorService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -22,7 +24,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("autores")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AutorController {
 
     private final AutorService service;
@@ -63,7 +65,8 @@ public class AutorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deletar(@PathVariable("id") String id) {
+    public ResponseEntity<Object> deletar(@PathVariable("id") String id) {
+        try {
             var idAutor = UUID.fromString(id);
             Optional<Autor> autorOptional = service.obterPorId(idAutor);
 
@@ -74,7 +77,11 @@ public class AutorController {
             service.deletar(autorOptional.get());
 
             return ResponseEntity.noContent().build();
+        }catch (LivroAutorException e){
+            var erroResposta = ErroResposta.respostaPadrao(e.getMessage());
+            return ResponseEntity.status(erroResposta.status()).body(erroResposta);
         }
+    }
 
     @GetMapping
     public ResponseEntity<List<AutorDTO>> search(
