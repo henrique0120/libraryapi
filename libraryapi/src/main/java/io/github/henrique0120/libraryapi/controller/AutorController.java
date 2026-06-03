@@ -6,6 +6,7 @@ import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.service.AutorService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,7 @@ public class AutorController {
     private final AutorService service;
 
     @PostMapping
-    public ResponseEntity<Object> register(@RequestBody AutorDTO autor) {
+    public ResponseEntity<Object> register(@RequestBody @Valid AutorDTO autor) {
         try {
             Autor autorEntidade = autor.mapearParaAutor();
             service.salvar(autorEntidade);
