@@ -94,7 +94,7 @@ public class AutorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Object> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
+    public ResponseEntity<Object> update(@PathVariable("id") UUID id, @RequestBody @Valid AutorDTO autor){
         try {
             Optional<Autor> autorConsulta = service.obterPorId(id);
 
