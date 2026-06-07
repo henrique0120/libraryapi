@@ -4,26 +4,23 @@ import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
 @Component
+@RequiredArgsConstructor
 public class AutorValidator{
 
-    private AutorRepository repository;
-
-    public AutorValidator( AutorRepository repository) {
-        this.repository = repository;
-    }
+    private final AutorRepository repository;
 
     public void validar(Autor autor){
         if (existeAutorCadastrado(autor)){
             throw new RegistroDuplicadoException("Autor já cadastrado!");
         }
     }
-
 
     private boolean existeAutorCadastrado(Autor autor){
         Optional<Autor> autorEncontrado = repository.findByNomeAndDataNascimentoAndNacionalidade(

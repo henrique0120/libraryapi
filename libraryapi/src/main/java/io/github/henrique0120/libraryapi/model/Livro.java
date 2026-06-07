@@ -29,7 +29,7 @@ public class Livro {
     @Column(name = "titulo", length = 150, nullable = false)
     private String titulo;
 
-    @Column(name = "data_publicacao")
+    @Column(name = "data_publicacao", nullable = false)
     private LocalDate dataPublicacao;
 
     @Enumerated(EnumType.STRING)
@@ -47,7 +47,7 @@ public class Livro {
             //sempre usar fetch do tipo lazy como boa prática
         fetch = FetchType.LAZY
      )
-    @JoinColumn(name = "id_autor")
+    @JoinColumn(name = "id_autor", nullable = false)
     private Autor autor;
 
     @CreatedDate
