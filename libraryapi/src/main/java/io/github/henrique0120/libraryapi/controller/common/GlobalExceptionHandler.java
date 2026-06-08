@@ -28,4 +28,5 @@ public class GlobalExceptionHandler {
                 "Erro de validação.",
                 listaErros);
     }
+
 }

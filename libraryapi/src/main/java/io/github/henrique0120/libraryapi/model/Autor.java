@@ -41,7 +41,7 @@ public class Autor {
             //sempre usar fetch do tipo lazy como boa prática
             fetch = FetchType.LAZY
      )
-    //@JsonIgnore
+    @JsonIgnore
     private List<Livro> livros;
 
     @CreatedDate

@@ -1,5 +1,6 @@
 package io.github.henrique0120.libraryapi.service;
 
+import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
@@ -7,9 +8,11 @@ import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -27,5 +30,9 @@ public class LivroService {
     public List<Livro> validarExclusao(Autor autor) {
         Autor sla = new Autor();
         return sla.getLivros();
+    }
+
+    public Optional<LivroDTO> pesquisar(UUID id){
+        return repository.procurarPorId(id);
     }
 }
