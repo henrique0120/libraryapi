@@ -32,7 +32,4 @@ public class LivroService {
         return sla.getLivros();
     }
 
-    public Optional<LivroDTO> pesquisar(UUID id){
-        return repository.procurarPorId(id);
-    }
 }

@@ -21,7 +21,6 @@ import java.util.UUID;
 public class LivroController {
 
     private final LivroService service;
-    private final LivroDTO dto;
 
     @PostMapping
     public ResponseEntity<Object> register(@RequestBody @Valid LivroDTO livro){
@@ -45,9 +44,6 @@ public class LivroController {
         }
     }
 
-    @GetMapping("{id}")
-    public Optional<LivroDTO> pesquisar(@PathVariable("id") UUID id){
-        return service.pesquisar(id);
-    }
+
 
 }
