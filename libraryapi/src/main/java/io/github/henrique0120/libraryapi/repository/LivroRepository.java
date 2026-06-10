@@ -1,6 +1,5 @@
 package io.github.henrique0120.libraryapi.repository;
 
-import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -87,6 +85,13 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     boolean existsByAutor(Autor autor);
 
     boolean existsByIsbn(String isbn);
+
+    List<Livro> findByIsbn(  @Param("isbn") String isbn,
+                             @Param("titulo") String titulo,
+                             @Param("nome_autor") String nome,
+                             @Param("genero") GeneroLivro generoLivro,
+                             @Param("ano_publicacao") LocalDate dataPublicacao);
+
 
 
 }

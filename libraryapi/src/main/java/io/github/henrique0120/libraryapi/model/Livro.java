@@ -1,7 +1,5 @@
 package io.github.henrique0120.libraryapi.model;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
