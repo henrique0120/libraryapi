@@ -1,17 +1,15 @@
 package io.github.henrique0120.libraryapi.service;
 
-
-
 import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
+import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,6 +21,7 @@ import java.util.UUID;
 public class LivroService {
 
     private final LivroRepository repository;
+    private final AutorRepository autorRepository;
     private final LivroValidator validator;
     private final LivroMapper mapper;
 
@@ -45,12 +44,11 @@ public class LivroService {
         repository.deleteById(id);
     }
 
-    public List<Livro> pesquisarLivros(String isbn, String titulo,
-                                       String nome, GeneroLivro genero,
-                             LocalDate data_publicacao){
+    public List<Autor> procurarLivro(String isbn, String titulo, String nome_autor, GeneroLivro genero, LocalDate data_publicacao){
 
-        var lista = repository.findByIsbn(isbn, titulo, nome, genero, data_publicacao);
-        return lista;
+        
+        repository.findByIsbnAndTituloAndNomeAutorAndGeneroAndDataDePublicacao(isbn, titulo, nome_autor, genero, data_publicacao);
+        return autorRepository.findByNome(nome_autor);
     }
 
 }

@@ -61,8 +61,6 @@ public class LivroController {
                 }).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-
-
     @DeleteMapping("{id}")
     public ResponseEntity<String> deletar(@PathVariable("id") UUID id){
         Optional<Livro> a = service.pesquisar(id);
@@ -74,14 +72,12 @@ public class LivroController {
     }
 
     @GetMapping
-    public List<Livro> findLivro(@RequestParam("isbn") String isbn,
-                                 @RequestParam("titulo") String titulo,
-                                 @RequestParam("nome_autor") String nome,
-                                 @RequestParam("genero") GeneroLivro generoLivro,
-                                 @RequestParam("ano_publicacao") LocalDate dataPublicacao)
-                          {
-        return service.pesquisarLivros(isbn, titulo, nome, generoLivro, dataPublicacao);
-    }
+    public List<Autor> search(@RequestParam(value = "isbn") String isbn,
+                              @RequestParam(value = "titulo") String titulo,
+                              @RequestParam(value = "nome_autor") String nome_autor,
+                              @RequestParam(value = "genero") GeneroLivro genero,
+                              @RequestParam(value = "data_publicacao") LocalDate data_publicacao){
 
+    }
 
 }
