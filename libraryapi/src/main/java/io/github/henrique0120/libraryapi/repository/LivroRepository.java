@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -82,11 +83,13 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     @Query("update Livro set dataPublicacao = ?1")
     void updateDataPublicacao(LocalDate localDate);
 
+    boolean existsById(UUID id);
+
     boolean existsByAutor(Autor autor);
 
     boolean existsByIsbn(String isbn);
 
-    List<Livro> findByIsbnAndTituloAndNomeAutorAndGeneroAndDataDePublicacao(String isbn, String titulo, String nome_autor, GeneroLivro genero, LocalDate data_publicacao);
+    List<Livro> findByIsbnAndTituloAndGeneroAndDataPublicacao(String isbn, String titulo, GeneroLivro genero, LocalDate data_publicacao);
 
 
 }

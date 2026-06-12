@@ -1,5 +1,6 @@
 package io.github.henrique0120.libraryapi.service;
 
+import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
@@ -18,7 +19,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class LivroService {
+public class  LivroService {
 
     private final LivroRepository repository;
     private final AutorRepository autorRepository;
@@ -44,11 +45,15 @@ public class LivroService {
         repository.deleteById(id);
     }
 
-    public List<Autor> procurarLivro(String isbn, String titulo, String nome_autor, GeneroLivro genero, LocalDate data_publicacao){
-
-        
-        repository.findByIsbnAndTituloAndNomeAutorAndGeneroAndDataDePublicacao(isbn, titulo, nome_autor, genero, data_publicacao);
-        return autorRepository.findByNome(nome_autor);
+    public ResponseEntity<Livro> atualizar (UUID id, LivroDTO dto){
+        Optional<Livro> encontrado = repository.findById(id);
+        if (encontrado.isPresent()){
+            Livro a = encontrado.get();
+            a.setTitulo(dto.titulo());
+            repository.save(a);
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 
 }

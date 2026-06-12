@@ -71,12 +71,9 @@ public class LivroController {
         return ResponseEntity.status(HttpStatusCode.valueOf(404)).body("Livro inexistente");
     }
 
-    @GetMapping
-    public List<Autor> search(@RequestParam(value = "isbn") String isbn,
-                              @RequestParam(value = "titulo") String titulo,
-                              @RequestParam(value = "nome_autor") String nome_autor,
-                              @RequestParam(value = "genero") GeneroLivro genero,
-                              @RequestParam(value = "data_publicacao") LocalDate data_publicacao){
+    @PutMapping("{id}")
+    public ResponseEntity<Livro> att (UUID id, LivroDTO dto){
+        return service.atualizar(id, dto);
 
     }
 
