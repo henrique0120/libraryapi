@@ -89,7 +89,4 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
 
     boolean existsByIsbn(String isbn);
 
-    List<Livro> findByIsbnAndTituloAndGeneroAndDataPublicacao(String isbn, String titulo, GeneroLivro genero, LocalDate data_publicacao);
-
-
 }

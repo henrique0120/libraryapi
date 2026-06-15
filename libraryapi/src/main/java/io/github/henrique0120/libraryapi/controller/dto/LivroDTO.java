@@ -22,15 +22,4 @@ public record LivroDTO(
         BigDecimal preco,
         @NotNull
         Autor autor
-){
-    public Livro mapearParaLivro(){
-        Livro livro = new Livro();
-        livro.setIsbn(this.isbn);
-        livro.setTitulo(this.titulo);
-        livro.setDataPublicacao(this.dataPublicacao);
-        livro.setGenero(this.genero);
-        livro.setPreco(this.preco);
-        livro.setAutor(this.autor);
-        return livro;
-    }
-}
+){}

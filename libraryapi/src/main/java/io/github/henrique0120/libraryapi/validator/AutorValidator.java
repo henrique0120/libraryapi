@@ -2,12 +2,9 @@ package io.github.henrique0120.libraryapi.validator;
 
 import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
-import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 import java.util.Optional;
 
 @Component

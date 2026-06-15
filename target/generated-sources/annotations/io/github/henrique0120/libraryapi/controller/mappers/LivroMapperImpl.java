@@ -1,6 +1,7 @@
 package io.github.henrique0120.libraryapi.controller.mappers;
 
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
+import io.github.henrique0120.libraryapi.controller.dto.CadastroLivroDTO;
 import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.controller.dto.ResultadoPesquisaLivroDTO;
 import io.github.henrique0120.libraryapi.model.Autor;
@@ -14,11 +15,29 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-06-12T16:48:25-0300",
+    date = "2026-06-15T13:27:21-0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.11 (Microsoft)"
 )
 @Component
-public class LivroMapperImpl implements LivroMapper {
+public class LivroMapperImpl extends LivroMapper {
+
+    @Override
+    public Livro toEntity(CadastroLivroDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        Livro livro = new Livro();
+
+        livro.setIsbn( dto.isbn() );
+        livro.setTitulo( dto.titulo() );
+        livro.setGenero( dto.genero() );
+        livro.setPreco( dto.preco() );
+
+        livro.setAutor( autorRepository.findById(dto.idAutor()).orElse(null) );
+
+        return livro;
+    }
 
     @Override
     public ResultadoPesquisaLivroDTO toDTO(Livro livro) {

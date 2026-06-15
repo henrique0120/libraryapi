@@ -26,10 +26,9 @@ public class  LivroService {
     private final LivroValidator validator;
     private final LivroMapper mapper;
 
-    public ResponseEntity<Livro> register(Livro livro){
+    public Livro register(Livro livro){
         validator.validar(livro.getIsbn());
-        repository.save(livro);
-        return ResponseEntity.ok().build();
+        return repository.save(livro);
     }
 
     public List<Livro> validarExclusao(Autor autor) {
@@ -45,11 +44,17 @@ public class  LivroService {
         repository.deleteById(id);
     }
 
-    public ResponseEntity<Livro> atualizar (UUID id, LivroDTO dto){
+    public ResponseEntity<LivroDTO> atualizar (UUID id, LivroDTO dto){
         Optional<Livro> encontrado = repository.findById(id);
+
         if (encontrado.isPresent()){
             Livro a = encontrado.get();
+            a.setIsbn(dto.isbn());
             a.setTitulo(dto.titulo());
+            a.setDataPublicacao(dto.dataPublicacao());
+            a.setGenero(dto.genero());
+            a.setPreco(dto.preco());
+            a.setAutor(dto.autor());
             repository.save(a);
             return ResponseEntity.ok().build();
         }
