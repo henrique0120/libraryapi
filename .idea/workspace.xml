@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Criando método PUT para Livro">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Livro Mapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LivroDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LivroDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/LivroMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/LivroMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/LivroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/LivroRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/validator/AutorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/validator/AutorValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,13 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781293747994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Código mais limpo para tratativa de erros">
+      <option name="closed" value="true" />
+      <created>1781549079712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1781549079712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Começando a usar o Mapstruct" />
     <MESSAGE value="Criando regras de negocio Livro" />
     <MESSAGE value="Criando método PUT para Livro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando método PUT para Livro" />
+    <MESSAGE value="Código mais limpo para tratativa de erros" />
+    <MESSAGE value="Livro Mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Livro Mapper" />
   </component>
 </project>
