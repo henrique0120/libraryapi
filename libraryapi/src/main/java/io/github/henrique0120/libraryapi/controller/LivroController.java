@@ -47,14 +47,15 @@ public class LivroController implements GenericController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deletar(@PathVariable("id") UUID id) {
-        Optional<Livro> a = service.pesquisar(id);
-        if (a.isPresent()) {
-            service.deletar(id);
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.status(HttpStatusCode.valueOf(404)).body("Livro inexistente");
+    public ResponseEntity<Object> deletar(@PathVariable("id") String id) {
+        return service.obterPorId(UUID.fromString(id))
+                .map(livro -> {
+                    service.deletar(livro);
+                    return ResponseEntity.noContent().build();
+                }).orElseGet(() -> ResponseEntity.notFound().build());
+
     }
+
 
     @PutMapping("{id}")
     public ResponseEntity<LivroDTO> att(@PathVariable("id") UUID id, @RequestBody LivroDTO dto) {

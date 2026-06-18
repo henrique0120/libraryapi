@@ -9,6 +9,7 @@ import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -36,12 +37,12 @@ public class  LivroService {
         return sla.getLivros();
     }
 
-    public Optional<Livro> pesquisar(UUID id){
+    public Optional<Livro> obterPorId(UUID id){
         return repository.findById(id);
     }
 
-    public void deletar(UUID id){
-        repository.deleteById(id);
+    public void deletar(Livro livro){
+        repository.delete(livro);
     }
 
     public ResponseEntity<LivroDTO> atualizar (UUID id, LivroDTO dto){
@@ -59,6 +60,15 @@ public class  LivroService {
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    public List<Livro> pesquisa(
+            String isbn, GeneroLivro genero, String nomeAutor, Integer anoPublicacao){
+        Specification<Livro> find = null;
+
+        //where isbn = :isbn
+        Specification<Livro> isbnEqual = (root, query, cb) -> cb.equal(root.get("isbn"), isbn);
+        return repository.findAll(isbnEqual);
     }
 
 }
