@@ -7,6 +7,7 @@ import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
+import io.github.henrique0120.libraryapi.repository.specs.LivroSpecs;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
@@ -17,6 +18,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import static io.github.henrique0120.libraryapi.repository.specs.LivroSpecs.*;
 
 @Service
 @RequiredArgsConstructor
@@ -63,12 +66,36 @@ public class  LivroService {
     }
 
     public List<Livro> pesquisa(
-            String isbn, GeneroLivro genero, String nomeAutor, Integer anoPublicacao){
-        Specification<Livro> find = null;
+            String isbn, String titulo, GeneroLivro genero, String nomeAutor, Integer anoPublicacao){
 
-        //where isbn = :isbn
-        Specification<Livro> isbnEqual = (root, query, cb) -> cb.equal(root.get("isbn"), isbn);
-        return repository.findAll(isbnEqual);
+        // select * from livro where isbn = :isbn and nomeAutor =
+
+//        Specification<Livro> specs = Specification
+//                .where(LivroSpecs.isbnEqual(isbn))
+//                .and(LivroSpecs.tituloLike(titulo))
+//                .and(LivroSpecs.generoEqual(genero))
+//                ;
+
+        Specification<Livro> specs = Specification.where((root, query, cb) -> cb.conjunction());
+
+        if(isbn != null){
+            //query = query and isbn = :isbn
+            specs = specs.and(isbnEqual(isbn));
+        }
+
+        if(titulo != null){
+            specs = specs.and(tituloLike(titulo));
+        }
+
+        if(genero != null){
+            specs = specs.and(generoEqual(genero));
+        }
+
+        if(anoPublicacao != null){
+            specs = specs.and(anoPublicacaoEqual(anoPublicacao));
+        }
+
+        return repository.findAll(specs);
     }
 
 }
