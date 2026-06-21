@@ -1,0 +1,75 @@
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutoresDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutoresDTO.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutorDTO.java
+rename from libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutoresDTO.java
+rename to libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutorDTO.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutoresDTO.java	(revision 35a17556feb5fd70cb22b13026d4c4f6b27d7f94)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/dto/AutorDTO.java	(date 1779557860750)
+@@ -3,7 +3,8 @@
+ 
+ import java.util.Date;
+ 
+-public record AutoresDTO(
++public record
++AutorDTO(
+         String nome,
+         String nacionalidade,
+         Date dataNascimento
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutoresController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutoresController.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java
+rename from libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutoresController.java
+rename to libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutoresController.java	(revision 35a17556feb5fd70cb22b13026d4c4f6b27d7f94)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java	(date 1779557860744)
+@@ -1,7 +1,7 @@
+ package io.github.henrique0120.libraryapi.controller;
+ 
+ import io.github.henrique0120.libraryapi.model.Autor;
+-import io.github.henrique0120.libraryapi.service.AutoresService;
++import io.github.henrique0120.libraryapi.service.AutorService;
+ import lombok.AllArgsConstructor;
+ import org.springframework.web.bind.annotation.*;
+ 
+@@ -11,9 +11,9 @@
+ @RestController
+ @RequestMapping("/autores")
+ @AllArgsConstructor
+-public class AutoresController {
++public class AutorController {
+ 
+-    private AutoresService autoresControllerService;
++    private AutorService autoresControllerService;
+ 
+     @PostMapping
+     public Autor register(@RequestBody Autor autor){
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutoresService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutoresService.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java
+rename from libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutoresService.java
+rename to libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutoresService.java	(revision 35a17556feb5fd70cb22b13026d4c4f6b27d7f94)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java	(date 1779557860757)
+@@ -5,12 +5,11 @@
+ import lombok.AllArgsConstructor;
+ import org.springframework.stereotype.Service;
+ 
+-import java.util.Optional;
+ import java.util.UUID;
+ 
+ @Service
+ @AllArgsConstructor
+-public class AutoresService {
++public class AutorService {
+ 
+ 
+     private AutorRepository autorRepository;

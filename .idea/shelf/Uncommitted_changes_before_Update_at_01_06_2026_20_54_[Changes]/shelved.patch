@@ -1,0 +1,186 @@
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.github.henrique0120.libraryapi.repository;\r\n\r\nimport io.github.henrique0120.libraryapi.model.Autor;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\nimport org.springframework.data.jpa.repository.Query;\r\nimport org.springframework.data.repository.query.Param;\r\nimport org.springframework.stereotype.Repository;\r\n\r\nimport java.util.List;\r\nimport java.util.Optional;\r\nimport java.util.UUID;\r\n\r\n@Repository\r\npublic interface AutorRepository extends JpaRepository<Autor, UUID> {\r\n\r\n//    @Query(\"select n from Autor n where n.nome = :nome and n.nacionalidade = :nacionalidade\")\r\n//    Optional<Autor> find(@Param(\"nome\") String nome,\r\n//               @Param(\"nacionalidade\") String nacionalidade);\r\n\r\n    List<Autor> findByNome(String nome);\r\n    List<Autor> findByNacionalidade(String nacionalidade);\r\n    List<Autor> findByNomeAndNacionalidade(String nome, String nacionalidade);\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java	(revision dd1d91dda9a0363f954ba4a2c7cf7743bd005dc1)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java	(date 1780261266506)
+@@ -6,6 +6,7 @@
+ import org.springframework.data.repository.query.Param;
+ import org.springframework.stereotype.Repository;
+ 
++import java.time.LocalDate;
+ import java.util.List;
+ import java.util.Optional;
+ import java.util.UUID;
+@@ -17,6 +18,7 @@
+ //    Optional<Autor> find(@Param("nome") String nome,
+ //               @Param("nacionalidade") String nacionalidade);
+ 
++    Optional<Autor> findByNomeAndDataNascimentoAndNacionalidade(String nome, LocalDate dataNascimento, String nacionalidade);
+     List<Autor> findByNome(String nome);
+     List<Autor> findByNacionalidade(String nacionalidade);
+     List<Autor> findByNomeAndNacionalidade(String nome, String nacionalidade);
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.github.henrique0120.libraryapi.service;\r\n\r\nimport io.github.henrique0120.libraryapi.controller.dto.AutorDTO;\r\nimport io.github.henrique0120.libraryapi.model.Autor;\r\nimport io.github.henrique0120.libraryapi.repository.AutorRepository;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.stereotype.Service;\r\n\r\nimport java.util.List;\r\nimport java.util.Optional;\r\nimport java.util.UUID;\r\n\r\n@Service\r\npublic class AutorService {\r\n\r\n    private final AutorRepository repository;\r\n\r\n    public AutorService(AutorRepository repository){\r\n        this.repository = repository;\r\n    }\r\n\r\n    public Autor salvar(Autor autor){\r\n        return repository.save(autor);\r\n    }\r\n\r\n    public void update(Autor autor){\r\n        if(autor.getId() == null){\r\n            throw new IllegalArgumentException(\"Para atualizar, é necessário que o autor esteja cadastrado no banco.\");\r\n        }\r\n        repository.save(autor);\r\n    }\r\n\r\n    public Optional<Autor> obterPorId(UUID id){\r\n        return repository.findById(id);\r\n    }\r\n\r\n    public void deletar(Autor autor){\r\n        repository.delete(autor);\r\n    }\r\n\r\n    public List<Autor> search(String nome, String nacionalidade){\r\n        if ( nome != null && nacionalidade != null){\r\n            return repository.findByNomeAndNacionalidade(nome, nacionalidade);\r\n        }if(nome != null){\r\n            return repository.findByNome(nome);\r\n        }if(nacionalidade != null){\r\n            return repository.findByNacionalidade(nacionalidade);\r\n        }\r\n        return repository.findAll();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java	(revision dd1d91dda9a0363f954ba4a2c7cf7743bd005dc1)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java	(date 1780261095520)
+@@ -3,9 +3,11 @@
+ import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
+ import io.github.henrique0120.libraryapi.model.Autor;
+ import io.github.henrique0120.libraryapi.repository.AutorRepository;
++import io.github.henrique0120.libraryapi.validator.AutorValidator;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.stereotype.Service;
+ 
++import javax.swing.text.html.Option;
+ import java.util.List;
+ import java.util.Optional;
+ import java.util.UUID;
+@@ -14,19 +16,23 @@
+ public class AutorService {
+ 
+     private final AutorRepository repository;
++    private final AutorValidator validator;
+ 
+-    public AutorService(AutorRepository repository){
++    public AutorService(AutorRepository repository, AutorValidator validator){
+         this.repository = repository;
++        this.validator = validator;
+     }
+ 
+-    public Autor salvar(Autor autor){
+-        return repository.save(autor);
++    public void salvar(Autor autor){
++        validator.validar(autor);
++        repository.save(autor);
+     }
+ 
+     public void update(Autor autor){
+         if(autor.getId() == null){
+             throw new IllegalArgumentException("Para atualizar, é necessário que o autor esteja cadastrado no banco.");
+         }
++        validator.validar(autor);
+         repository.save(autor);
+     }
+ 
+Index: libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.github.henrique0120.libraryapi.controller;\r\n\r\nimport io.github.henrique0120.libraryapi.controller.dto.AutorDTO;\r\nimport io.github.henrique0120.libraryapi.model.Autor;\r\nimport io.github.henrique0120.libraryapi.service.AutorService;\r\nimport lombok.AllArgsConstructor;\r\nimport org.apache.catalina.connector.Response;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.http.HttpStatusCode;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\nimport org.springframework.web.servlet.support.ServletUriComponentsBuilder;\r\n\r\nimport java.net.URI;\r\nimport java.util.List;\r\nimport java.util.Optional;\r\nimport java.util.UUID;\r\nimport java.util.stream.Collectors;\r\n\r\n@RestController\r\n@RequestMapping(\"autores\")\r\n@AllArgsConstructor\r\npublic class AutorController {\r\n\r\n    private final AutorService service;\r\n\r\n    @PostMapping\r\n    public ResponseEntity<Void> register(@RequestBody AutorDTO autor) {\r\n        Autor autorEntidade = autor.mapearParaAutor();\r\n        service.salvar(autorEntidade);\r\n\r\n        URI location = ServletUriComponentsBuilder\r\n                .fromCurrentRequest()\r\n                .path(\"/{id}\")\r\n                .buildAndExpand(autorEntidade.getId())\r\n                .toUri();\r\n\r\n        return ResponseEntity.created(location).build();\r\n    }\r\n\r\n    @GetMapping(\"{id}\")\r\n    public ResponseEntity<AutorDTO> obterDetalhes(@PathVariable(\"id\") String id) {\r\n        var idAutor = UUID.fromString(id);\r\n        Optional<Autor> autorOptional = service.obterPorId(idAutor);\r\n        if (autorOptional.isPresent()) {\r\n            Autor autor = autorOptional.get();\r\n            AutorDTO dto = new AutorDTO(\r\n                    autor.getId(),\r\n                    autor.getNome(),\r\n                    autor.getDataNascimento(),\r\n                    autor.getNacionalidade());\r\n            return ResponseEntity.ok(dto);\r\n        }\r\n        return ResponseEntity.notFound().build();\r\n    }\r\n\r\n    @DeleteMapping(\"{id}\")\r\n    public ResponseEntity<Void> deletar(@PathVariable(\"id\") String id) {\r\n        var idAutor = UUID.fromString(id);\r\n        Optional<Autor> autorOptional = service.obterPorId(idAutor);\r\n\r\n        if (autorOptional.isEmpty()) {\r\n            return ResponseEntity.notFound().build();\r\n        }\r\n\r\n        service.deletar(autorOptional.get());\r\n\r\n        return ResponseEntity.noContent().build();\r\n    }\r\n\r\n    @GetMapping\r\n    public ResponseEntity<List<AutorDTO>> search(\r\n            @RequestParam(value = \"nome\", required = false) String nome,\r\n            @RequestParam(value = \"nacionalidade\", required = false) String nacionalidade) {\r\n        List<Autor> resultado = service.search(nome, nacionalidade);\r\n        List<AutorDTO> lista = resultado\r\n                .stream()\r\n                .map(autor -> new AutorDTO(\r\n                        autor.getId(),\r\n                        autor.getNome(),\r\n                        autor.getDataNascimento(),\r\n                        autor.getNacionalidade())\r\n                ).collect(Collectors.toList());\r\n                return ResponseEntity.ok(lista);\r\n    }\r\n\r\n    @PutMapping(\"{id}\")\r\n    public ResponseEntity<String> update(@PathVariable(\"id\") UUID id, @RequestBody AutorDTO autor){\r\n        Optional<Autor> autorConsulta = service.obterPorId(id);\r\n\r\n        if (autorConsulta.isEmpty()){\r\n            return ResponseEntity.unprocessableContent().build();\r\n        }\r\n\r\n        Autor entidade = autorConsulta.get();\r\n        entidade.setNome(autor.nome());\r\n        entidade.setDataNascimento(autor.dataNascimento());\r\n        entidade.setNacionalidade(autor.nacionalidade());\r\n\r\n        service.update(entidade);\r\n\r\n        return ResponseEntity.noContent().build();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java
+--- a/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java	(revision dd1d91dda9a0363f954ba4a2c7cf7743bd005dc1)
++++ b/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java	(date 1780261918515)
+@@ -1,6 +1,8 @@
+ package io.github.henrique0120.libraryapi.controller;
+ 
+ import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
++import io.github.henrique0120.libraryapi.controller.dto.ErroResposta;
++import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
+ import io.github.henrique0120.libraryapi.model.Autor;
+ import io.github.henrique0120.libraryapi.service.AutorService;
+ import lombok.AllArgsConstructor;
+@@ -25,17 +27,23 @@
+     private final AutorService service;
+ 
+     @PostMapping
+-    public ResponseEntity<Void> register(@RequestBody AutorDTO autor) {
+-        Autor autorEntidade = autor.mapearParaAutor();
+-        service.salvar(autorEntidade);
++    public ResponseEntity<Object> register(@RequestBody AutorDTO autor) {
++        try {
++            Autor autorEntidade = autor.mapearParaAutor();
++
++            service.salvar(autorEntidade);
+ 
+-        URI location = ServletUriComponentsBuilder
+-                .fromCurrentRequest()
+-                .path("/{id}")
+-                .buildAndExpand(autorEntidade.getId())
+-                .toUri();
++            URI location = ServletUriComponentsBuilder
++                    .fromCurrentRequest()
++                    .path("/{id}")
++                    .buildAndExpand(autorEntidade.getId())
++                    .toUri();
+ 
+-        return ResponseEntity.created(location).build();
++            return ResponseEntity.created(location).build();
++        }catch (RegistroDuplicadoException e){
++            var erroDTO = ErroResposta.conflito(e.getMessage());
++            return ResponseEntity.status(erroDTO.status()).body(erroDTO);
++        }
+     }
+ 
+     @GetMapping("{id}")
+@@ -85,20 +93,25 @@
+     }
+ 
+     @PutMapping("{id}")
+-    public ResponseEntity<String> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
+-        Optional<Autor> autorConsulta = service.obterPorId(id);
++    public ResponseEntity<Object> update(@PathVariable("id") UUID id, @RequestBody AutorDTO autor){
++        try {
++            Optional<Autor> autorConsulta = service.obterPorId(id);
+ 
+-        if (autorConsulta.isEmpty()){
+-            return ResponseEntity.unprocessableContent().build();
+-        }
++            if (autorConsulta.isEmpty()) {
++                return ResponseEntity.unprocessableContent().build();
++            }
+ 
+-        Autor entidade = autorConsulta.get();
+-        entidade.setNome(autor.nome());
+-        entidade.setDataNascimento(autor.dataNascimento());
+-        entidade.setNacionalidade(autor.nacionalidade());
++            Autor entidade = autorConsulta.get();
++            entidade.setNome(autor.nome());
++            entidade.setDataNascimento(autor.dataNascimento());
++            entidade.setNacionalidade(autor.nacionalidade());
+ 
+-        service.update(entidade);
++            service.update(entidade);
+ 
+-        return ResponseEntity.noContent().build();
++            return ResponseEntity.noContent().build();
++        }catch (RegistroDuplicadoException e){
++            var erroDTO = ErroResposta.conflito(e.getMessage());
++            return ResponseEntity.status(erroDTO.status()).body(erroDTO);
++        }
+     }
+ }
+\ No newline at end of file
+Index: libraryapi/src/main/resources/application.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring:\r\n  application:\r\n    name: libraryapi\r\n  datasource:\r\n    url: jdbc:postgresql://localhost:5432/library\r\n    username: postgres\r\n    password: postgres\r\n    driver-class-name: org.postgresql.Driver\r\n  jpa:\r\n    show-sql: true\r\n    hibernate:\r\n#      ddl-auto: update\r\n      ddl-auto: none\r\n    properties:\r\n      hibernate.format_sql: true
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/libraryapi/src/main/resources/application.yaml b/libraryapi/src/main/resources/application.yaml
+--- a/libraryapi/src/main/resources/application.yaml	(revision dd1d91dda9a0363f954ba4a2c7cf7743bd005dc1)
++++ b/libraryapi/src/main/resources/application.yaml	(date 1780241559931)
+@@ -9,7 +9,7 @@
+   jpa:
+     show-sql: true
+     hibernate:
+-#      ddl-auto: update
+-      ddl-auto: none
++#      ddl-auto: none
++      ddl-auto: update
+     properties:
+       hibernate.format_sql: true
+\ No newline at end of file
