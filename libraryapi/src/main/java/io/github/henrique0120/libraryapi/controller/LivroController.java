@@ -2,19 +2,15 @@ package io.github.henrique0120.libraryapi.controller;
 
 import io.github.henrique0120.libraryapi.controller.dto.*;
 import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
-import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.service.LivroService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -61,12 +57,26 @@ public class LivroController implements GenericController {
 
 
     @PutMapping("{id}")
-    public ResponseEntity<LivroDTO> att(@PathVariable("id") UUID id, @RequestBody LivroDTO dto) {
-        return service.atualizar(id, dto);
+    public ResponseEntity<Object> att(@PathVariable("id") UUID id, @RequestBody @Valid CadastroLivroDTO dto) {
+        return service
+                .obterPorId(id)
+                .map(livro -> {
+                    Livro entidadeAux = mapper.toEntity(dto);
+                    livro.setIsbn(entidadeAux.getIsbn());
+                    livro.setDataPublicacao(entidadeAux.getDataPublicacao());
+                    livro.setPreco(entidadeAux.getPreco());
+                    livro.setGenero(entidadeAux.getGenero());
+                    livro.setTitulo(entidadeAux.getTitulo());
+                    livro.setAutor(entidadeAux.getAutor());
+
+                    service.atualizar(livro);
+
+                    return ResponseEntity.noContent().build();
+                }).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping
-    public ResponseEntity<List<ResultadoPesquisaLivroDTO>> pesquisa(
+    public ResponseEntity<Page<ResultadoPesquisaLivroDTO>> pesquisa(
             @RequestParam(value = "isbn", required = false)
             String isbn,
             @RequestParam(value = "titulo", required = false)
@@ -76,13 +86,16 @@ public class LivroController implements GenericController {
             @RequestParam(value = "nome-autor", required = false)
             String nomeAutor,
             @RequestParam(value = "ano-publicacao", required = false)
-            Integer anoPublicacao
+            Integer anoPublicacao,
+            @RequestParam(value = "pagina", defaultValue = "0")
+            Integer pagina,
+            @RequestParam(value = "tamanho-pagina", defaultValue = "")
+            Integer tamanhoPagina
     ){
-        var resultado = service.pesquisa(isbn, titulo, genero, nomeAutor, anoPublicacao);
-        var lista = resultado
-                .stream()
-                .map(mapper::toDTO)
-                .collect(Collectors.toList());
-        return ResponseEntity.ok(lista);
+        Page<Livro> paginaResultado = service.pesquisa(isbn, titulo, genero, nomeAutor, anoPublicacao, pagina, tamanhoPagina);
+
+        Page<ResultadoPesquisaLivroDTO> resultado = paginaResultado.map(mapper::toDTO);
+
+        return ResponseEntity.ok(resultado);
     }
 }

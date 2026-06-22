@@ -1,5 +1,6 @@
 package io.github.henrique0120.libraryapi.service;
 
+import io.github.henrique0120.libraryapi.controller.dto.CadastroLivroDTO;
 import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
@@ -10,6 +11,9 @@ import io.github.henrique0120.libraryapi.repository.LivroRepository;
 import io.github.henrique0120.libraryapi.repository.specs.LivroSpecs;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -23,15 +27,15 @@ import static io.github.henrique0120.libraryapi.repository.specs.LivroSpecs.*;
 
 @Service
 @RequiredArgsConstructor
-public class  LivroService {
+public class LivroService {
 
     private final LivroRepository repository;
     private final AutorRepository autorRepository;
     private final LivroValidator validator;
     private final LivroMapper mapper;
 
-    public Livro register(Livro livro){
-        validator.validar(livro.getIsbn());
+    public Livro register(Livro livro) {
+        validator.validar(livro);
         return repository.save(livro);
     }
 
@@ -40,33 +44,30 @@ public class  LivroService {
         return sla.getLivros();
     }
 
-    public Optional<Livro> obterPorId(UUID id){
+    public Optional<Livro> obterPorId(UUID id) {
         return repository.findById(id);
     }
 
-    public void deletar(Livro livro){
+    public void deletar(Livro livro) {
         repository.delete(livro);
     }
 
-    public ResponseEntity<LivroDTO> atualizar (UUID id, LivroDTO dto){
-        Optional<Livro> encontrado = repository.findById(id);
-
-        if (encontrado.isPresent()){
-            Livro a = encontrado.get();
-            a.setIsbn(dto.isbn());
-            a.setTitulo(dto.titulo());
-            a.setDataPublicacao(dto.dataPublicacao());
-            a.setGenero(dto.genero());
-            a.setPreco(dto.preco());
-            a.setAutor(dto.autor());
-            repository.save(a);
-            return ResponseEntity.ok().build();
+    public void atualizar(Livro livro) {
+        if (livro.getId() == null) {
+            throw new IllegalArgumentException("Para atualizar, é necessário que o livro esteja cadastrado no banco.");
         }
-        return ResponseEntity.notFound().build();
+        validator.validar(livro);
+        repository.save(livro);
     }
 
-    public List<Livro> pesquisa(
-            String isbn, String titulo, GeneroLivro genero, String nomeAutor, Integer anoPublicacao){
+    public Page<Livro> pesquisa(
+            String isbn,
+            String titulo,
+            GeneroLivro genero,
+            String nomeAutor,
+            Integer anoPublicacao,
+            Integer pagina,
+            Integer tamanhoPagina){
 
         // select * from livro where isbn = :isbn and nomeAutor =
 
@@ -78,28 +79,30 @@ public class  LivroService {
 
         Specification<Livro> specs = Specification.where((root, query, cb) -> cb.conjunction());
 
-        if(isbn != null){
+        if (isbn != null) {
             //query = query and isbn = :isbn
             specs = specs.and(isbnEqual(isbn));
         }
 
-        if(titulo != null){
+        if (titulo != null) {
             specs = specs.and(tituloLike(titulo));
         }
 
-        if(genero != null){
+        if (genero != null) {
             specs = specs.and(generoEqual(genero));
         }
 
-        if(anoPublicacao != null){
+        if (anoPublicacao != null) {
             specs = specs.and(anoPublicacaoEqual(anoPublicacao));
         }
 
-        if(nomeAutor != null){
+        if (nomeAutor != null) {
             specs = specs.and(nomeAutorLike(nomeAutor));
         }
 
-        return repository.findAll(specs);
+        Pageable pageRequest = PageRequest.of(pagina, tamanhoPagina);
+
+        return repository.findAll(specs, pageRequest);
     }
 
 }

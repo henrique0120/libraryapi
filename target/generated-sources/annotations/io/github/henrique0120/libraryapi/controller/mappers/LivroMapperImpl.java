@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-06-19T16:37:34-0300",
+    date = "2026-06-22T10:06:01-0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.11 (Microsoft)"
 )
 @Component
@@ -35,6 +35,7 @@ public class LivroMapperImpl extends LivroMapper {
 
         livro.setIsbn( dto.isbn() );
         livro.setTitulo( dto.titulo() );
+        livro.setDataPublicacao( dto.dataPublicacao() );
         livro.setGenero( dto.genero() );
         livro.setPreco( dto.preco() );
 
