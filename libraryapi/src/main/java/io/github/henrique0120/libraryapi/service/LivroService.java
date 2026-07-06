@@ -6,9 +6,11 @@ import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
+import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
 import io.github.henrique0120.libraryapi.repository.specs.LivroSpecs;
+import io.github.henrique0120.libraryapi.security.SecurityService;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -33,9 +35,12 @@ public class LivroService {
     private final AutorRepository autorRepository;
     private final LivroValidator validator;
     private final LivroMapper mapper;
+    private final SecurityService securityService;
 
     public Livro register(Livro livro) {
         validator.validar(livro);
+        Usuario usuario = securityService.obterUsuarioLogado();
+        livro.setIdUsuario(usuario);
         return repository.save(livro);
     }
 

@@ -12,7 +12,7 @@ import java.util.UUID;
 public record AutorDTO(
         UUID id,
         @NotBlank(message = "Campo obrigatório")
-        @Size(min = 2, max = 11, message = "Campo fora do tamanho padrão")
+        @Size(min = 2, max = 100, message = "Campo fora do tamanho padrão")
         String nome,
         @NotNull(message = "Campo obrigatório")
         @Past(message = "Não pode ser uma data futura")

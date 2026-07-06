@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Form login">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Criando tabela usuario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/DatabaseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/DatabaseConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +69,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [install,--non-recursive].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Application.executor": "Run",
+    "Maven.libraryapi [clean,compile].executor": "Run",
+    "Maven.libraryapi [clean,install].executor": "Run",
+    "Maven.libraryapi [install,--non-recursive].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Application.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
@@ -96,7 +109,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -196,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783022618507</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Criando tabela usuario">
+      <option name="closed" value="true" />
+      <created>1783106917735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1783106917735</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +230,14 @@
     <MESSAGE value="Specifications e Paginação finalizados" />
     <MESSAGE value="Começando com Basic Auth" />
     <MESSAGE value="Form login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form login" />
+    <MESSAGE value="Criando tabela usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando tabela usuario" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="authentication" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

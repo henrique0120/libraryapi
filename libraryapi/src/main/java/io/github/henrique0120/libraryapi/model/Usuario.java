@@ -1,7 +1,9 @@
 package io.github.henrique0120.libraryapi.model;
 
+import io.hypersistence.utils.hibernate.type.array.ListArrayType;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Type;
 
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +23,7 @@ public class Usuario {
     @Column
     private String senha;
 
-    @Column(name = "roles")
+    @Type(ListArrayType.class)
+    @Column(name = "roles", columnDefinition = "varchar[]")
     private List<String> roles;
 }
