@@ -40,7 +40,7 @@ public class LivroService {
     public Livro register(Livro livro) {
         validator.validar(livro);
         Usuario usuario = securityService.obterUsuarioLogado();
-        livro.setIdUsuario(usuario);
+        livro.setUsuario(usuario);
         return repository.save(livro);
     }
 

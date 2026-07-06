@@ -1,24 +1,15 @@
 package io.github.henrique0120.libraryapi.controller;
 
 import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
-import io.github.henrique0120.libraryapi.controller.dto.ErroResposta;
 import io.github.henrique0120.libraryapi.controller.mappers.AutorMapper;
-import io.github.henrique0120.libraryapi.exceptions.OperacaoNaoPermitidaException;
-import io.github.henrique0120.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.henrique0120.libraryapi.model.Autor;
-import io.github.henrique0120.libraryapi.model.Usuario;
-import io.github.henrique0120.libraryapi.security.SecurityService;
 import io.github.henrique0120.libraryapi.service.AutorService;
-import io.github.henrique0120.libraryapi.service.UsuarioService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.apache.catalina.connector.Response;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +18,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("autores")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AutorController implements GenericController {
 
     private final AutorService service;
