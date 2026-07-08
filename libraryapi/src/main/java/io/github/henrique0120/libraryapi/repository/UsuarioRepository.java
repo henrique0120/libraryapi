@@ -9,5 +9,4 @@ public interface UsuarioRepository extends JpaRepository<Usuario, UUID> {
 
     Usuario findByLogin(String login);
 
-
 }

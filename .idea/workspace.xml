@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Começando OAuth2">
-      <change afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthentication.java" afterDir="false" />
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Spring Security Básico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LivroDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LivroDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/ResultadoPesquisaLivroDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/ResultadoPesquisaLivroDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/LivroMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/LivroMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/AutorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783514911912</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Spring Security Básico">
+      <option name="closed" value="true" />
+      <created>1783515949189</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1783515949189</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,9 +271,9 @@
     <MESSAGE value="Começando com Basic Auth" />
     <MESSAGE value="Form login" />
     <MESSAGE value="Criando tabela usuario" />
-    <MESSAGE value="Spring Security Básico" />
     <MESSAGE value="Começando OAuth2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Começando OAuth2" />
+    <MESSAGE value="Spring Security Básico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Security Básico" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
