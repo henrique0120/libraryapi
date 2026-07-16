@@ -16,15 +16,15 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    private final UsuarioService service;
+    private final UsuarioService usuarioService;
     private final PasswordEncoder encoder;
 
     @Override
-    public @Nullable Authentication authenticate(Authentication authentication) throws AuthenticationException {
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String login = authentication.getName();
         String senhaDigitada = authentication.getCredentials().toString();
 
-        Usuario usuarioEncontrado = service.obterPorLogin(login);
+        Usuario usuarioEncontrado = usuarioService.obterPorLogin(login);
 
         if(usuarioEncontrado == null){
             throw getErroUsuarioNaoEncontrado();
@@ -32,17 +32,17 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
         String senhaCriptografada = usuarioEncontrado.getSenha();
 
-        boolean senhasBatem = encoder.matches(senhaDigitada, senhaCriptografada);
+        boolean senhamBatem = encoder.matches(senhaDigitada, senhaCriptografada);
 
-        if(senhasBatem){
+        if(senhamBatem){
             return new CustomAuthentication(usuarioEncontrado);
         }
 
         throw getErroUsuarioNaoEncontrado();
     }
 
-    private static UsernameNotFoundException getErroUsuarioNaoEncontrado(){
-        return new UsernameNotFoundException("Usuario e/ou senha incorretos");
+    private UsernameNotFoundException getErroUsuarioNaoEncontrado() {
+        return new UsernameNotFoundException("Usuário e/ou senha incorretos!");
     }
 
     @Override

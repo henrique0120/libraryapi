@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Não sei mais de nada">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Login funcionando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/LoginSocialSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/LoginSocialSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" afterDir="false" />
@@ -285,7 +286,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784148465263</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Não sei mais de nada">
+      <option name="closed" value="true" />
+      <created>1784199595416</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1784199595417</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Login funcionando">
+      <option name="closed" value="true" />
+      <created>1784233719689</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1784233719689</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,18 +330,10 @@
     <MESSAGE value="Começando OAuth2" />
     <MESSAGE value="Spring Security Básico" />
     <MESSAGE value="Não sei mais de nada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Não sei mais de nada" />
+    <MESSAGE value="Login funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login funcionando" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthenticationProvider.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="authentication" />

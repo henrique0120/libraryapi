@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class LoginViewController {
 
-//    @GetMapping("/login")
-//    public String paginaLogin(){
-//        return "login";
-//    }
+    @GetMapping("/login")
+    public String paginaLogin(){
+        return "login";
+    }
 
     @GetMapping("/")
     @ResponseBody
