@@ -3,7 +3,6 @@ package io.github.henrique0120.libraryapi.security;
 import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
