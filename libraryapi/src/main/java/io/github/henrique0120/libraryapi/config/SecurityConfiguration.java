@@ -60,7 +60,6 @@ public class SecurityConfiguration {
         return new GrantedAuthorityDefaults("" );
     }
 
-
     //configura no token JWT o prefixo SCOPE
     @Bean
     public JwtAuthenticationConverter jwtAuthenticationConverter(){

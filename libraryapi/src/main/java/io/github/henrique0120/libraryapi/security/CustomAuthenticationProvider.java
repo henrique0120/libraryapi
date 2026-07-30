@@ -20,6 +20,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        System.out.println(">>> CustomAuthenticationProvider chamado");
         String login = authentication.getName();
         String senhaDigitada = authentication.getCredentials().toString();
 
