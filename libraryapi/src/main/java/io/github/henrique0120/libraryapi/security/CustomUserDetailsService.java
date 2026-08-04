@@ -17,11 +17,11 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-          Usuario usuario = service.obterPorLogin(login);
+        Usuario usuario = service.obterPorLogin(login);
 
-          if(usuario == null){
-               throw new UsernameNotFoundException("Usuario não encontrado!");
-          }
+        if(usuario == null){
+            throw new UsernameNotFoundException("Usuario não encontrado!");
+        }
 
         return User.builder()
                 .username(usuario.getLogin())

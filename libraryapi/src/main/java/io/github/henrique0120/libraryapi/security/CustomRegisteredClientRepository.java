@@ -2,7 +2,6 @@ package io.github.henrique0120.libraryapi.security;
 
 import io.github.henrique0120.libraryapi.service.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
@@ -20,24 +19,22 @@ public class CustomRegisteredClientRepository implements RegisteredClientReposit
     private final ClientSettings clientSettings;
 
     @Override
-    public void save(RegisteredClient registeredClient) {
-
-    }
+    public void save(RegisteredClient registeredClient) {}
 
     @Override
-    public @Nullable RegisteredClient findById(String id) {
+    public RegisteredClient findById(String id) {
         return null;
     }
 
     @Override
-    public @Nullable RegisteredClient findByClientId(String clientId) {
+    public RegisteredClient findByClientId(String clientId) {
         var client = clientService.obterPorClientID(clientId);
 
-        if (client == null) {
+        if(client == null){
             return null;
         }
 
-        return RegisteredClient
+        RegisteredClient var = RegisteredClient
                 .withId(client.getId().toString())
                 .clientId(client.getClientId())
                 .clientSecret(client.getClientSecret())
@@ -46,8 +43,15 @@ public class CustomRegisteredClientRepository implements RegisteredClientReposit
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .tokenSettings(tokenSettings)
                 .clientSettings(clientSettings)
                 .build();
+
+        System.out.println("Redirect URI: " + client.getRedirectURI());
+        System.out.println("ClientId: " + client.getClientId());
+
+        return var;
+
     }
 }

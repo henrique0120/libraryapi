@@ -17,7 +17,7 @@ public class SecurityService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if(authentication instanceof CustomAuthentication customAuth){
-             return customAuth.getUsuario();
+            return customAuth.getUsuario();
         }
 
         return null;
