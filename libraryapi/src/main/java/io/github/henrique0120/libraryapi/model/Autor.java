@@ -52,7 +52,7 @@ public class Autor {
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAutalização;
 
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+//    @ManyToOne
+//    @JoinColumn(name = "id_usuario")
+//    private Usuario usuario;
 }

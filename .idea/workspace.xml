@@ -5,21 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Projeto todo lascado">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/JwtCustomAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/AuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/AuthorizationServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomRegisteredClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomRegisteredClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/AuthorizationServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/ClientController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/ClientDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/UsuarioDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/ClientMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthenticationProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomRegisteredClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/JwtCustomAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/LoginSocialSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/SecurityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/ClientService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/UsuarioService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +63,12 @@
     &quot;assignee&quot;: &quot;henrique0120&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/henrique0120/libraryapi.git",
-    "accountId": "7abdee96-d190-4cab-a3eb-b562dfc12bde"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/henrique0120/libraryapi.git&quot;,
+    &quot;accountId&quot;: &quot;7abdee96-d190-4cab-a3eb-b562dfc12bde&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/7.1.0/spring-security-config-7.1.0-sources.jar!/org/springframework/security/config/core/GrantedAuthorityDefaults.java" root0="SKIP_INSPECTION" />
   </component>
@@ -67,61 +84,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0787033341860164" />
-      <entry key="MS500" value="2.2829516908875283" />
-      <entry key="S2" value="3.9346120140040868" />
-      <entry key="S5" value="4.526810401656313" />
-      <entry key="S10" value="4.755011923004558" />
-      <entry key="S30" value="5.084819729277388" />
-      <entry key="S60" value="5.779060635883357" />
-      <entry key="M2" value="6.796936632437573" />
-      <entry key="M5" value="8.184657849678803" />
-      <entry key="M10" value="9.942301578508156" />
-      <entry key="M15" value="11.419881358990283" />
-      <entry key="M30" value="14.242930472407238" />
-      <entry key="H1" value="17.719185189379637" />
-      <entry key="H2" value="22.280410639022925" />
-      <entry key="H4" value="26.686273582630342" />
-      <entry key="D1" value="32.50003178276368" />
-      <entry key="W1" value="33.77747835184053" />
+      <entry key="MS100" value="5.583652058414087E-11" />
+      <entry key="MS500" value="0.008899870134547783" />
+      <entry key="S2" value="0.30722945391681694" />
+      <entry key="S5" value="0.6821181482688606" />
+      <entry key="S10" value="1.3664821241186598" />
+      <entry key="S30" value="3.709249892399028" />
+      <entry key="S60" value="5.6361443474311335" />
+      <entry key="M2" value="8.27955697436524" />
+      <entry key="M5" value="12.242360998699569" />
+      <entry key="M10" value="15.387294893064741" />
+      <entry key="M15" value="17.437655256867743" />
+      <entry key="M30" value="20.999201303204465" />
+      <entry key="H1" value="24.950055611250317" />
+      <entry key="H2" value="29.802361085153972" />
+      <entry key="H4" value="34.402501628137856" />
+      <entry key="D1" value="40.44291739365425" />
+      <entry key="W1" value="41.76901104112372" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="2.163342878054186E-109" />
-      <entry key="S60" value="4.651174989512073E-55" />
-      <entry key="M2" value="6.8200259323754665E-28" />
-      <entry key="M5" value="1.3811655957073897E-11" />
-      <entry key="M10" value="4.339589577890469E-6" />
-      <entry key="M15" value="3.334148211384794E-4" />
-      <entry key="M30" value="0.029213573318941425" />
-      <entry key="H1" value="0.2902117317611203" />
-      <entry key="H2" value="0.9286042670598722" />
-      <entry key="H4" value="1.667121722187513" />
-      <entry key="D1" value="2.7197328023577256" />
-      <entry key="W1" value="2.958247946814908" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000001257106417" />
+      <entry key="S5" value="1.0034384223530235" />
+      <entry key="S10" value="1.1132976540198933" />
+      <entry key="S30" value="2.2291092105680193" />
+      <entry key="S60" value="3.3977091008434184" />
+      <entry key="M2" value="4.597440788153851" />
+      <entry key="M5" value="5.8105990418242595" />
+      <entry key="M10" value="6.356303131684306" />
+      <entry key="M15" value="6.559245633479752" />
+      <entry key="M30" value="6.800228952256042" />
+      <entry key="H1" value="7.163905578338394" />
+      <entry key="H2" value="7.852411930661041" />
+      <entry key="H4" value="8.621568119109071" />
+      <entry key="D1" value="9.710371338426771" />
+      <entry key="W1" value="9.956853309718186" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.927552666999148" />
-      <entry key="MS500" value="2.1262534773010313" />
-      <entry key="S2" value="3.820354400052823" />
-      <entry key="S5" value="4.468685936034243" />
-      <entry key="S10" value="4.723462888638832" />
-      <entry key="S30" value="5.071023745984393" />
-      <entry key="S60" value="5.7668756966999135" />
-      <entry key="M2" value="6.786821619564556" />
-      <entry key="M5" value="8.177901562257288" />
-      <entry key="M10" value="9.93630265999017" />
-      <entry key="M15" value="11.414574568736748" />
-      <entry key="M30" value="14.267667629320172" />
-      <entry key="H1" value="18.00591151264227" />
-      <entry key="H2" value="23.20627288595741" />
-      <entry key="H4" value="28.351495903566313" />
-      <entry key="D1" value="35.21932608661216" />
-      <entry key="W1" value="36.735659745442405" />
+      <entry key="MS100" value="2.6094889598777735E-7" />
+      <entry key="MS500" value="0.05689601697112177" />
+      <entry key="S2" value="0.7738207235581986" />
+      <entry key="S5" value="1.4170703368622184" />
+      <entry key="S10" value="2.2985110031917078" />
+      <entry key="S30" value="5.785008527686672" />
+      <entry key="S60" value="8.912892216462865" />
+      <entry key="M2" value="12.79261349914466" />
+      <entry key="M5" value="18.007701471123212" />
+      <entry key="M10" value="21.71642262866593" />
+      <entry key="M15" value="23.976652485117654" />
+      <entry key="M30" value="27.78732704664477" />
+      <entry key="H1" value="32.106561910289116" />
+      <entry key="H2" value="37.650043438946646" />
+      <entry key="H4" value="43.02116415440956" />
+      <entry key="D1" value="50.152679540031066" />
+      <entry key="W1" value="51.72577331038626" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -136,40 +153,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaMethodFindUsagesOptions.isSearchForBaseMethod": "false",
-    "Maven.Application.executor": "Run",
-    "Maven.libraryapi [clean,compile].executor": "Run",
-    "Maven.libraryapi [clean,install].executor": "Run",
-    "Maven.libraryapi [install,--non-recursive].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Henrique Souza/Desktop/spring/libraryapi",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaMethodFindUsagesOptions.isSearchForBaseMethod&quot;: &quot;false&quot;,
+    &quot;Maven.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Henrique Souza/Desktop/spring/libraryapi&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />

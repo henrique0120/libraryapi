@@ -1,26 +1,19 @@
 package io.github.henrique0120.libraryapi.service;
 
-import io.github.henrique0120.libraryapi.controller.dto.CadastroLivroDTO;
-import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
-import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
 import io.github.henrique0120.libraryapi.repository.LivroRepository;
-import io.github.henrique0120.libraryapi.repository.specs.LivroSpecs;
-import io.github.henrique0120.libraryapi.security.SecurityService;
 import io.github.henrique0120.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -35,12 +28,9 @@ public class LivroService {
     private final AutorRepository autorRepository;
     private final LivroValidator validator;
     private final LivroMapper mapper;
-    private final SecurityService securityService;
 
     public Livro register(Livro livro) {
         validator.validar(livro);
-        Usuario usuario = securityService.obterUsuarioLogado();
-        livro.setUsuario(usuario);
         return repository.save(livro);
     }
 
