@@ -4,39 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Projeto todo lascado">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Security do zero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/AuthorizationServerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/ClientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/ClientDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/UsuarioDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/ClientMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/UsuarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthentication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomRegisteredClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/JwtCustomAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/LoginSocialSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/security/SecurityService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AutorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/ClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/LivroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -84,61 +57,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.583652058414087E-11" />
-      <entry key="MS500" value="0.008899870134547783" />
-      <entry key="S2" value="0.30722945391681694" />
-      <entry key="S5" value="0.6821181482688606" />
-      <entry key="S10" value="1.3664821241186598" />
-      <entry key="S30" value="3.709249892399028" />
-      <entry key="S60" value="5.6361443474311335" />
-      <entry key="M2" value="8.27955697436524" />
-      <entry key="M5" value="12.242360998699569" />
-      <entry key="M10" value="15.387294893064741" />
-      <entry key="M15" value="17.437655256867743" />
-      <entry key="M30" value="20.999201303204465" />
-      <entry key="H1" value="24.950055611250317" />
-      <entry key="H2" value="29.802361085153972" />
-      <entry key="H4" value="34.402501628137856" />
-      <entry key="D1" value="40.44291739365425" />
-      <entry key="W1" value="41.76901104112372" />
+      <entry key="MS100" value="1.0006953370095688" />
+      <entry key="MS500" value="1.2335818367207951" />
+      <entry key="S2" value="1.6952000061367136" />
+      <entry key="S5" value="1.864657089924746" />
+      <entry key="S10" value="1.9298703450774393" />
+      <entry key="S30" value="2.0021828108115494" />
+      <entry key="S60" value="2.387214768680866" />
+      <entry key="M2" value="4.215800144026231" />
+      <entry key="M5" value="13.927483309178482" />
+      <entry key="M10" value="30.558367909774347" />
+      <entry key="M15" value="43.35449073681516" />
+      <entry key="M30" value="69.19145922698537" />
+      <entry key="H1" value="100.83957716877136" />
+      <entry key="H2" value="145.86799589290274" />
+      <entry key="H4" value="213.95090660821768" />
+      <entry key="D1" value="372.566217605439" />
+      <entry key="W1" value="421.79476793143175" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000001257106417" />
-      <entry key="S5" value="1.0034384223530235" />
-      <entry key="S10" value="1.1132976540198933" />
-      <entry key="S30" value="2.2291092105680193" />
-      <entry key="S60" value="3.3977091008434184" />
-      <entry key="M2" value="4.597440788153851" />
-      <entry key="M5" value="5.8105990418242595" />
-      <entry key="M10" value="6.356303131684306" />
-      <entry key="M15" value="6.559245633479752" />
-      <entry key="M30" value="6.800228952256042" />
-      <entry key="H1" value="7.163905578338394" />
-      <entry key="H2" value="7.852411930661041" />
-      <entry key="H4" value="8.621568119109071" />
-      <entry key="D1" value="9.710371338426771" />
-      <entry key="W1" value="9.956853309718186" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.4832238359829076E-130" />
+      <entry key="S2" value="3.7945989645498756E-33" />
+      <entry key="S5" value="1.432512989191843E-13" />
+      <entry key="S10" value="5.206940420863383E-7" />
+      <entry key="S30" value="0.013217745223127915" />
+      <entry key="S60" value="0.19531034582511914" />
+      <entry key="M2" value="1.0612694328809014" />
+      <entry key="M5" value="5.6485265815554175" />
+      <entry key="M10" value="13.282993177332944" />
+      <entry key="M15" value="19.10300752765551" />
+      <entry key="M30" value="31.859704897664564" />
+      <entry key="H1" value="49.49994529745608" />
+      <entry key="H2" value="72.54389511585285" />
+      <entry key="H4" value="101.14675682612773" />
+      <entry key="D1" value="158.32767097931676" />
+      <entry key="W1" value="174.93262946073838" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.6094889598777735E-7" />
-      <entry key="MS500" value="0.05689601697112177" />
-      <entry key="S2" value="0.7738207235581986" />
-      <entry key="S5" value="1.4170703368622184" />
-      <entry key="S10" value="2.2985110031917078" />
-      <entry key="S30" value="5.785008527686672" />
-      <entry key="S60" value="8.912892216462865" />
-      <entry key="M2" value="12.79261349914466" />
-      <entry key="M5" value="18.007701471123212" />
-      <entry key="M10" value="21.71642262866593" />
-      <entry key="M15" value="23.976652485117654" />
-      <entry key="M30" value="27.78732704664477" />
-      <entry key="H1" value="32.106561910289116" />
-      <entry key="H2" value="37.650043438946646" />
-      <entry key="H4" value="43.02116415440956" />
-      <entry key="D1" value="50.152679540031066" />
-      <entry key="W1" value="51.72577331038626" />
+      <entry key="MS100" value="0.18049143692730094" />
+      <entry key="MS500" value="0.7592263321063115" />
+      <entry key="S2" value="1.3888603735073783" />
+      <entry key="S5" value="1.7062370038125148" />
+      <entry key="S10" value="1.8432001250122576" />
+      <entry key="S30" value="1.983919755077169" />
+      <entry key="S60" value="2.560545023654521" />
+      <entry key="M2" value="5.248529158836339" />
+      <entry key="M5" value="19.523372242591957" />
+      <entry key="M10" value="43.7806055848081" />
+      <entry key="M15" value="62.3995663648583" />
+      <entry key="M30" value="101.00369115015616" />
+      <entry key="H1" value="150.30326543050174" />
+      <entry key="H2" value="218.3840028552603" />
+      <entry key="H4" value="315.07634332282225" />
+      <entry key="D1" value="530.8875942066675" />
+      <entry key="W1" value="596.7263794738534" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -541,7 +514,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="primeira parte jwt" />
     <MESSAGE value="Projeto todo lascado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projeto todo lascado" />
+    <MESSAGE value="Security do zero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Security do zero" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
