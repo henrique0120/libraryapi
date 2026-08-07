@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Security do zero">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Security do zero. SecurityConfiguration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Autor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/RolesRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
         <option value="Interface" />
       </list>
     </option>
@@ -57,61 +55,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0006953370095688" />
-      <entry key="MS500" value="1.2335818367207951" />
-      <entry key="S2" value="1.6952000061367136" />
-      <entry key="S5" value="1.864657089924746" />
-      <entry key="S10" value="1.9298703450774393" />
-      <entry key="S30" value="2.0021828108115494" />
-      <entry key="S60" value="2.387214768680866" />
-      <entry key="M2" value="4.215800144026231" />
-      <entry key="M5" value="13.927483309178482" />
-      <entry key="M10" value="30.558367909774347" />
-      <entry key="M15" value="43.35449073681516" />
-      <entry key="M30" value="69.19145922698537" />
-      <entry key="H1" value="100.83957716877136" />
-      <entry key="H2" value="145.86799589290274" />
-      <entry key="H4" value="213.95090660821768" />
-      <entry key="D1" value="372.566217605439" />
-      <entry key="W1" value="421.79476793143175" />
+      <entry key="MS100" value="1.6967542339097875E-17" />
+      <entry key="MS500" value="4.4251071204459664E-4" />
+      <entry key="S2" value="0.1450377143450962" />
+      <entry key="S5" value="0.46194724229861645" />
+      <entry key="S10" value="0.679667073989445" />
+      <entry key="S30" value="0.8856163367509473" />
+      <entry key="S60" value="1.0533355132315882" />
+      <entry key="M2" value="1.5452579273469786" />
+      <entry key="M5" value="3.1028864269462217" />
+      <entry key="M10" value="6.3568986102100045" />
+      <entry key="M15" value="11.302873739291957" />
+      <entry key="M30" value="28.263349918370427" />
+      <entry key="H1" value="54.12341301241994" />
+      <entry key="H2" value="91.43441617830369" />
+      <entry key="H4" value="162.62740696788745" />
+      <entry key="D1" value="439.5030047982152" />
+      <entry key="W1" value="558.1294156450606" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.4832238359829076E-130" />
-      <entry key="S2" value="3.7945989645498756E-33" />
-      <entry key="S5" value="1.432512989191843E-13" />
-      <entry key="S10" value="5.206940420863383E-7" />
-      <entry key="S30" value="0.013217745223127915" />
-      <entry key="S60" value="0.19531034582511914" />
-      <entry key="M2" value="1.0612694328809014" />
-      <entry key="M5" value="5.6485265815554175" />
-      <entry key="M10" value="13.282993177332944" />
-      <entry key="M15" value="19.10300752765551" />
-      <entry key="M30" value="31.859704897664564" />
-      <entry key="H1" value="49.49994529745608" />
-      <entry key="H2" value="72.54389511585285" />
-      <entry key="H4" value="101.14675682612773" />
-      <entry key="D1" value="158.32767097931676" />
-      <entry key="W1" value="174.93262946073838" />
+      <entry key="MS100" value="1.0000000001374856" />
+      <entry key="MS500" value="1.010657404959995" />
+      <entry key="S2" value="1.3213015843673432" />
+      <entry key="S5" value="1.6349874572143501" />
+      <entry key="S10" value="1.7968610473618956" />
+      <entry key="S30" value="1.9306567709203573" />
+      <entry key="S60" value="2.022483151081369" />
+      <entry key="M2" value="2.22543314270459" />
+      <entry key="M5" value="2.5901488613166306" />
+      <entry key="M10" value="3.460926061158658" />
+      <entry key="M15" value="4.972876288959052" />
+      <entry key="M30" value="10.001353553469219" />
+      <entry key="H1" value="17.54507917508172" />
+      <entry key="H2" value="30.829312661783497" />
+      <entry key="H4" value="61.04027164609654" />
+      <entry key="D1" value="174.7125942087547" />
+      <entry key="W1" value="220.8459265271675" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.18049143692730094" />
-      <entry key="MS500" value="0.7592263321063115" />
-      <entry key="S2" value="1.3888603735073783" />
-      <entry key="S5" value="1.7062370038125148" />
-      <entry key="S10" value="1.8432001250122576" />
-      <entry key="S30" value="1.983919755077169" />
-      <entry key="S60" value="2.560545023654521" />
-      <entry key="M2" value="5.248529158836339" />
-      <entry key="M5" value="19.523372242591957" />
-      <entry key="M10" value="43.7806055848081" />
-      <entry key="M15" value="62.3995663648583" />
-      <entry key="M30" value="101.00369115015616" />
-      <entry key="H1" value="150.30326543050174" />
-      <entry key="H2" value="218.3840028552603" />
-      <entry key="H4" value="315.07634332282225" />
-      <entry key="D1" value="530.8875942066675" />
-      <entry key="W1" value="596.7263794738534" />
+      <entry key="MS100" value="0.005679580145941027" />
+      <entry key="MS500" value="0.3585867431761242" />
+      <entry key="S2" value="1.1342674647322402" />
+      <entry key="S5" value="1.902592922321311" />
+      <entry key="S10" value="2.362331693311936" />
+      <entry key="S30" value="2.773248211618354" />
+      <entry key="S60" value="3.051953219553127" />
+      <entry key="M2" value="3.755217396750886" />
+      <entry key="M5" value="5.682427375231297" />
+      <entry key="M10" value="9.80566499584022" />
+      <entry key="M15" value="16.25960205856318" />
+      <entry key="M30" value="38.242959057374584" />
+      <entry key="H1" value="71.64747396013338" />
+      <entry key="H2" value="122.2456720435896" />
+      <entry key="H4" value="223.65125241362097" />
+      <entry key="D1" value="614.2080877309766" />
+      <entry key="W1" value="778.9739798864156" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -126,40 +124,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaMethodFindUsagesOptions.isSearchForBaseMethod&quot;: &quot;false&quot;,
-    &quot;Maven.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [install,--non-recursive].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Henrique Souza/Desktop/spring/libraryapi&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaMethodFindUsagesOptions.isSearchForBaseMethod": "false",
+    "Maven.Application.executor": "Run",
+    "Maven.libraryapi [clean,compile].executor": "Run",
+    "Maven.libraryapi [clean,install].executor": "Run",
+    "Maven.libraryapi [install,--non-recursive].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Henrique Souza/Desktop/spring/libraryapi",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -515,7 +513,8 @@
     <MESSAGE value="primeira parte jwt" />
     <MESSAGE value="Projeto todo lascado" />
     <MESSAGE value="Security do zero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Security do zero" />
+    <MESSAGE value="Security do zero. SecurityConfiguration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Security do zero. SecurityConfiguration" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -523,5 +522,9 @@
         <watch expression="authentication" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
