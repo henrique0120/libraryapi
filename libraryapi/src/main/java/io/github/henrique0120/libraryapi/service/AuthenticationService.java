@@ -1,28 +1,72 @@
 package io.github.henrique0120.libraryapi.service;
 
+import io.github.henrique0120.libraryapi.config.TokenProvider;
+import io.github.henrique0120.libraryapi.controller.dto.LoginRequestDTO;
+import io.github.henrique0120.libraryapi.controller.dto.TokenResponseDTO;
+import io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO;
+import io.github.henrique0120.libraryapi.enums.RoleType;
+import io.github.henrique0120.libraryapi.model.Roles;
 import io.github.henrique0120.libraryapi.model.Usuario;
+import io.github.henrique0120.libraryapi.repository.RolesRepository;
 import io.github.henrique0120.libraryapi.repository.UsuarioRepository;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
 
     private final UsuarioRepository usuarioRepository;
+    private final RolesRepository rolesRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final AuthenticationManager authenticationManager;
+    private final TokenProvider tokenProvider;
+    @Value("$(jwt.expiration)")
+    private long expirationTime;
 
-    public Usuario criarUsuario(Usuario usuario) throws BadRequestException{
-        Optional<Usuario> var =  usuarioRepository.findByEmail(usuario.getEmail());
+    public Usuario criarUsuario(RegisterRequestDTO dto) throws BadRequestException{
+        Optional<Usuario> var =  usuarioRepository.findByEmail(dto.getEmail());
 
         if (var.isPresent()){
             throw new BadRequestException("Já existe um usuario cadastrado com esse e-mail.");
         }
 
-        return usuarioRepository.save(usuario);
+        Roles role = rolesRepository.findByName(RoleType.OPERADOR.name())
+                .orElseGet(() -> rolesRepository.save(Roles.builder()
+                                .nome(RoleType.OPERADOR.name())
+                        .build()));
+
+        return usuarioRepository.save(Usuario.builder()
+                .nome(dto.getNome())
+                .email(dto.getEmail())
+                .roles(Set.of(role))
+                .senha(passwordEncoder.encode(dto.getSenha()))
+                .build());
     }
 
+        public TokenResponseDTO login(LoginRequestDTO dto) throws Exception{
+            try{
+                Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(dto.getEmail(), dto.getSenha()));
+                String token = tokenProvider.gerarToken(authentication);
 
+                return new TokenResponseDTO(token, expirationTime);
+            }
+            catch (BadCredentialsException e){
+                throw new BadRequestException("Credenciais inválidas");
+            }catch (Exception e){
+                throw e;
+            }
+        }
 }
