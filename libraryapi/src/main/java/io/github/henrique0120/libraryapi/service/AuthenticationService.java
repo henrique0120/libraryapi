@@ -9,8 +9,6 @@ import io.github.henrique0120.libraryapi.model.Roles;
 import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.repository.RolesRepository;
 import io.github.henrique0120.libraryapi.repository.UsuarioRepository;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,26 +31,27 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final TokenProvider tokenProvider;
-    @Value("$(jwt.expiration)")
+    @Value("${jwt.expiration}")
     private long expirationTime;
 
-    public Usuario criarUsuario(RegisterRequestDTO dto) throws BadRequestException{
+    public void criarUsuario(RegisterRequestDTO dto) throws BadRequestException{
         Optional<Usuario> var =  usuarioRepository.findByEmail(dto.getEmail());
 
         if (var.isPresent()){
             throw new BadRequestException("Já existe um usuario cadastrado com esse e-mail.");
         }
 
-        Roles role = rolesRepository.findByName(RoleType.OPERADOR.name())
+        Roles role = rolesRepository.findByNome(RoleType.ROLE_OPERADOR.name())
                 .orElseGet(() -> rolesRepository.save(Roles.builder()
-                                .nome(RoleType.OPERADOR.name())
+                        .nome(RoleType.ROLE_OPERADOR.name())
                         .build()));
 
-        return usuarioRepository.save(Usuario.builder()
+
+        usuarioRepository.save(Usuario.builder()
                 .nome(dto.getNome())
                 .email(dto.getEmail())
-                .roles(Set.of(role))
                 .senha(passwordEncoder.encode(dto.getSenha()))
+                .roles(Set.of(role))
                 .build());
     }
 
@@ -66,7 +65,7 @@ public class AuthenticationService {
             catch (BadCredentialsException e){
                 throw new BadRequestException("Credenciais inválidas");
             }catch (Exception e){
-                throw e;
+                throw new Exception("Erro interno inesperado: " + e.getMessage());
             }
         }
 }

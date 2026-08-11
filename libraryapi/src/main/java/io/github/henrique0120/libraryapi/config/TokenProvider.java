@@ -14,10 +14,10 @@ import java.util.Date;
 @Component
 public class TokenProvider {
 
-    @Value("$(jwt.expiration)")
+    @Value("${jwt.expiration}")
     private long expirationTime;
 
-    @Value("$(jwt.key)")
+    @Value("${jwt.key}")
     private String key;
 
     public String gerarToken(Authentication authentication){

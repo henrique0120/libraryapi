@@ -1,11 +1,12 @@
 package io.github.henrique0120.libraryapi.controller.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 @Builder
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class RegisterRequestDTO {
 
     @NotBlank

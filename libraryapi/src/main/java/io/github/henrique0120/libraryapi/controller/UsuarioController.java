@@ -2,6 +2,7 @@ package io.github.henrique0120.libraryapi.controller;
 
 import io.github.henrique0120.libraryapi.controller.dto.LoginRequestDTO;
 import io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO;
+import io.github.henrique0120.libraryapi.controller.dto.TokenResponseDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.UsuarioMapper;
 import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.service.AuthenticationService;
@@ -27,12 +28,10 @@ public class UsuarioController {
         //var a = mapper.toEntity(dto);
         authenticationService.criarUsuario(dto);
         return ResponseEntity.ok().build();
-
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Usuario> login(@RequestBody @Valid LoginRequestDTO dto) throws Exception {
-        authenticationService.login(dto);
-        return ResponseEntity.ok().build();
+    public TokenResponseDTO login(@RequestBody @Valid LoginRequestDTO dto) throws Exception {
+        return authenticationService.login(dto);
     }
 }
