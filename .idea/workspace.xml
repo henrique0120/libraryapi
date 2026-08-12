@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Cheiro de erros">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Consertei os erros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/TokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LoginRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/LoginRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/RegisterRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/RegisterRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/RolesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/RolesDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/enums/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/enums/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/repository/RolesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,61 +61,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
+      <entry key="MS100" value="2.3915381943145594E-21" />
+      <entry key="MS500" value="1.361003773479515E-4" />
+      <entry key="S2" value="0.3231581940493701" />
+      <entry key="S5" value="1.653844208842279" />
+      <entry key="S10" value="2.870410183210848" />
+      <entry key="S30" value="4.153863321156434" />
+      <entry key="S60" value="4.557105851906077" />
+      <entry key="M2" value="4.7737293740742786" />
+      <entry key="M5" value="4.978921427570864" />
+      <entry key="M10" value="5.415541977776103" />
+      <entry key="M15" value="5.889385751923161" />
+      <entry key="M30" value="7.11128245494134" />
+      <entry key="H1" value="9.461261063310715" />
+      <entry key="H2" value="19.571455019466992" />
+      <entry key="H4" value="61.49019415672772" />
+      <entry key="D1" value="448.6858238276862" />
+      <entry key="W1" value="729.0640951928406" />
+    </decayedCancelled>
+    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000000018554" />
-      <entry key="S30" value="1.000194917767637" />
-      <entry key="S60" value="1.019742474694177" />
-      <entry key="M2" value="1.1987037391396442" />
-      <entry key="M5" value="1.7955047177248367" />
-      <entry key="M10" value="2.3242735917123256" />
-      <entry key="M15" value="2.7028921225500278" />
-      <entry key="M30" value="3.6448463484515568" />
-      <entry key="H1" value="5.85050244134383" />
-      <entry key="H2" value="16.67669831930149" />
-      <entry key="H4" value="60.42740046454648" />
-      <entry key="D1" value="448.6939346495773" />
-      <entry key="W1" value="725.2260121597377" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="1.105229658765422E-23" />
-      <entry key="MS500" value="2.5626571439945684E-5" />
-      <entry key="S2" value="0.07114962681717986" />
-      <entry key="S5" value="0.3474313874046174" />
-      <entry key="S10" value="0.5894331093857528" />
-      <entry key="S30" value="0.8398225834569293" />
-      <entry key="S60" value="0.9526923864373367" />
-      <entry key="M2" value="1.1493180506670118" />
-      <entry key="M5" value="1.4997748474189003" />
-      <entry key="M10" value="1.7104397376742781" />
-      <entry key="M15" value="1.7975212140538526" />
-      <entry key="M30" value="1.9241519527448339" />
-      <entry key="H1" value="2.403303152993454" />
-      <entry key="H2" value="5.7153691370509625" />
-      <entry key="H4" value="20.817704242846425" />
-      <entry key="D1" value="170.67336486212614" />
-      <entry key="W1" value="278.28588542214453" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000000000078" />
+      <entry key="S60" value="1.0000000911835634" />
+      <entry key="M2" value="1.00035556758372" />
+      <entry key="M5" value="1.0591859794443166" />
+      <entry key="M10" value="1.3397849698732716" />
+      <entry key="M15" value="1.6119814838115818" />
+      <entry key="M30" value="2.122720091829834" />
+      <entry key="H1" value="2.835796851389465" />
+      <entry key="H2" value="5.9951935144848685" />
+      <entry key="H4" value="20.461972310495565" />
+      <entry key="D1" value="169.76851153983333" />
+      <entry key="W1" value="278.8400488464355" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0027241087233406346" />
-      <entry key="MS500" value="0.30693409623875295" />
-      <entry key="S2" value="0.7647833373189505" />
-      <entry key="S5" value="1.0996379763674766" />
-      <entry key="S10" value="1.4020466014497115" />
-      <entry key="S30" value="1.7535962036005843" />
-      <entry key="S60" value="1.9239136942719317" />
-      <entry key="M2" value="2.318394890237253" />
-      <entry key="M5" value="3.278401624880273" />
-      <entry key="M10" value="4.024177742825295" />
-      <entry key="M15" value="4.492287869500115" />
-      <entry key="M30" value="5.563467285342483" />
-      <entry key="H1" value="8.249706500442915" />
-      <entry key="H2" value="22.387939741016538" />
-      <entry key="H4" value="81.23910506137184" />
-      <entry key="D1" value="619.3599690308075" />
-      <entry key="W1" value="1003.5101907439737" />
+      <entry key="MS100" value="4.485514336246446E-21" />
+      <entry key="MS500" value="2.0800237746455692E-4" />
+      <entry key="S2" value="0.4139373030213416" />
+      <entry key="S5" value="2.0356523479031794" />
+      <entry key="S10" value="3.4879039487154313" />
+      <entry key="S30" value="5.005274007736451" />
+      <entry key="S60" value="5.479805014176322" />
+      <entry key="M2" value="5.734642723317407" />
+      <entry key="M5" value="6.021476185441448" />
+      <entry key="M10" value="6.7452190938573535" />
+      <entry key="M15" value="7.493250356818775" />
+      <entry key="M30" value="9.228096403875721" />
+      <entry key="H1" value="12.292586429791681" />
+      <entry key="H2" value="25.562370545474423" />
+      <entry key="H4" value="81.94622228873288" />
+      <entry key="D1" value="618.4470308173233" />
+      <entry key="W1" value="1007.9024319523223" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -144,41 +130,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.generated-requests | #1.executor": "Run",
-    "JavaMethodFindUsagesOptions.isSearchForBaseMethod": "false",
-    "Maven.Application.executor": "Run",
-    "Maven.libraryapi [clean,compile].executor": "Run",
-    "Maven.libraryapi [clean,install].executor": "Run",
-    "Maven.libraryapi [install,--non-recursive].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Henrique Souza/Desktop/spring/libraryapi",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;JavaMethodFindUsagesOptions.isSearchForBaseMethod&quot;: &quot;false&quot;,
+    &quot;Maven.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.libraryapi [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Henrique Souza/Desktop/spring/libraryapi&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -537,7 +523,8 @@
     <MESSAGE value="Security do zero. SecurityConfiguration" />
     <MESSAGE value="Security do zero. RolesMapper" />
     <MESSAGE value="Cheiro de erros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cheiro de erros" />
+    <MESSAGE value="Consertei os erros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consertei os erros" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
