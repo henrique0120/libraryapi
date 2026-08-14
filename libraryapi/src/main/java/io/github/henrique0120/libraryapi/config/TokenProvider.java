@@ -50,8 +50,6 @@ public class TokenProvider {
         }
     }
 
-
-
     //extrair informações do token
     public String getUsername (String token){
         return getClaims(token).getSubject();

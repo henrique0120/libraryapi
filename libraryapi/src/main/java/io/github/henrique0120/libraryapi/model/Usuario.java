@@ -22,8 +22,8 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column
     private UUID id;
-    @Column(nullable = false)
 
+    @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false, unique = true)
