@@ -6,6 +6,7 @@ import io.github.henrique0120.libraryapi.controller.dto.TokenResponseDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.UsuarioMapper;
 import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.service.AuthenticationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("auth")
 @RequiredArgsConstructor
+@Tag(name = "Usuarios")
 public class UsuarioController {
 
     private final AuthenticationService authenticationService;
