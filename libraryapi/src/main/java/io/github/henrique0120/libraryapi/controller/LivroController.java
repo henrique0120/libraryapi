@@ -5,6 +5,9 @@ import io.github.henrique0120.libraryapi.controller.mappers.LivroMapper;
 import io.github.henrique0120.libraryapi.model.GeneroLivro;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.service.LivroService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +27,13 @@ public class LivroController implements GenericController {
     private final LivroMapper mapper;
 
     @PostMapping
+    @Operation(summary = "Salvar", description = "Cadastrar novo livro")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Cadastrado com sucesso!"),
+            @ApiResponse(responseCode = "422", description = "Erro de validação!"),
+            @ApiResponse(responseCode = "409", description = "Livro já cadastrado!"),
+
+    })
     public ResponseEntity<Void> register(@RequestBody @Valid CadastroLivroDTO dto) {
         Livro livro = mapper.toEntity(dto);
         // mapear dto para entidade
@@ -37,6 +47,12 @@ public class LivroController implements GenericController {
     }
 
     @GetMapping("{id}")
+    @Operation(summary = "Pesquisar", description = "Obter autore pelo ID")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Obtido com sucesso!"),
+            @ApiResponse(responseCode = "404", description = "Autor não encontrado!")
+
+    })
     public ResponseEntity<ResultadoPesquisaLivroDTO> pesquisar(@PathVariable("id") UUID id) {
         return service
                 .obterPorId(id)
@@ -47,6 +63,13 @@ public class LivroController implements GenericController {
     }
 
     @DeleteMapping("{id}")
+    @Operation(summary = "Deletar", description = "Deleta um livro")
+    @ApiResponses({
+            @ApiResponse(responseCode = "204", description = "Deletado com sucesso!"),
+            @ApiResponse(responseCode = "404", description = "Livro não encontrado!"),
+            @ApiResponse(responseCode = "400", description = "Livro possui Autor cadastrado!"),
+
+    })
     public ResponseEntity<Object> deletar(@PathVariable("id") String id) {
         return service.obterPorId(UUID.fromString(id))
                 .map(livro -> {

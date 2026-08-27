@@ -6,6 +6,9 @@ import io.github.henrique0120.libraryapi.controller.dto.TokenResponseDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.UsuarioMapper;
 import io.github.henrique0120.libraryapi.model.Usuario;
 import io.github.henrique0120.libraryapi.service.AuthenticationService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +29,13 @@ public class UsuarioController {
     private final UsuarioMapper mapper;
 
     @PostMapping("/salvar")
+    @Operation(summary = "Salvar", description = "Cadastrar novo autor")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Cadastrado com sucesso!"),
+            @ApiResponse(responseCode = "422", description = "Erro de validação!"),
+            @ApiResponse(responseCode = "409", description = "Autor já cadastrado!"),
+
+    })
     public ResponseEntity<Usuario> salvar(@RequestBody @Valid RegisterRequestDTO dto) throws BadRequestException {
         //var a = mapper.toEntity(dto);
         authenticationService.criarUsuario(dto);

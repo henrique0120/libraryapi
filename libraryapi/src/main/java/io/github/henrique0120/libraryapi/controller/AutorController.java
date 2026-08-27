@@ -4,12 +4,13 @@ import io.github.henrique0120.libraryapi.controller.dto.AutorDTO;
 import io.github.henrique0120.libraryapi.controller.mappers.AutorMapper;
 import io.github.henrique0120.libraryapi.model.Autor;
 import io.github.henrique0120.libraryapi.service.AutorService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
@@ -27,6 +28,13 @@ public class AutorController implements GenericController {
     private final AutorMapper mapper;
 
     @PostMapping
+    @Operation(summary = "Salvar", description = "Cadastrar novo autor")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Cadastrado com sucesso!"),
+            @ApiResponse(responseCode = "422", description = "Erro de validação!"),
+            @ApiResponse(responseCode = "409", description = "Autor já cadastrado!"),
+
+    })
     public ResponseEntity<Void> register(@RequestBody @Valid AutorDTO dto) {
         Autor autor = mapper.toEntity(dto);
         service.salvar(autor);
@@ -35,6 +43,12 @@ public class AutorController implements GenericController {
     }
 
     @GetMapping("{id}")
+    @Operation(summary = "Pesquisar", description = "Obter autores pelo ID")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Pesquisado com sucesso!"),
+            @ApiResponse(responseCode = "404", description = "Autor não encontrado!")
+
+    })
     public ResponseEntity<AutorDTO> obterDetalhes(@PathVariable("id") String id) {
         var idAutor = UUID.fromString(id);
 
@@ -47,6 +61,13 @@ public class AutorController implements GenericController {
     }
 
     @DeleteMapping("{id}")
+    @Operation(summary = "Deletar", description = "Deleta um autor")
+    @ApiResponses({
+            @ApiResponse(responseCode = "204", description = "Deletado com sucesso!"),
+            @ApiResponse(responseCode = "404", description = "Autor não encontrado!"),
+            @ApiResponse(responseCode = "400", description = "Autor possui livro cadastrado!"),
+
+    })
     public ResponseEntity<Void> deletar(@PathVariable("id") String id) {
         var idAutor = UUID.fromString(id);
         Optional<Autor> autorOptional = service.obterPorId(idAutor);
@@ -61,6 +82,11 @@ public class AutorController implements GenericController {
     }
 
     @GetMapping
+    @Operation(summary = "Pesquisar", description = "Pesquisa um autor por parametros")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Sucesso!")
+
+    })
     public ResponseEntity<List<AutorDTO>> search(
             @RequestParam(value = "nome", required = false) String nome,
             @RequestParam(value = "nacionalidade", required = false) String nacionalidade) {
@@ -73,6 +99,13 @@ public class AutorController implements GenericController {
     }
 
     @PutMapping("{id}")
+    @Operation(summary = "Atualizar", description = "Atualiza um autor por parametros")
+    @ApiResponses({
+            @ApiResponse(responseCode = "204", description = "Atualizado com sucesso!"),
+            @ApiResponse(responseCode = "404", description = "Autor não encontrado!"),
+            @ApiResponse(responseCode = "400", description = "Autor possui livro cadastrado!")
+
+    })
     public ResponseEntity<Void> update(@PathVariable("id") UUID id, @RequestBody @Valid AutorDTO autor) {
         Optional<Autor> autorConsulta = service.obterPorId(id);
 

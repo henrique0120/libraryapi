@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Att">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Swagger já funcionando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/OpenApiConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/config/OpenApiConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/AutorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/LivroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/java/io/github/henrique0120/libraryapi/controller/dto/AutorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" afterDir="false" />
@@ -70,60 +71,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.000000000013274" />
-      <entry key="S60" value="1.0000073625305375" />
-      <entry key="M2" value="1.0079208778744644" />
-      <entry key="M5" value="1.76613208744758" />
-      <entry key="M10" value="6.029156585657669" />
-      <entry key="M15" value="11.677663674078191" />
-      <entry key="M30" value="25.885101669179207" />
-      <entry key="H1" value="41.303383916507215" />
-      <entry key="H2" value="59.19140337109715" />
-      <entry key="H4" value="102.08873088904865" />
-      <entry key="D1" value="490.9949971467147" />
-      <entry key="W1" value="782.7045787808163" />
+      <entry key="MS500" value="1.0000106263082937" />
+      <entry key="S2" value="1.057094676061759" />
+      <entry key="S5" value="1.3185984409922236" />
+      <entry key="S10" value="1.5996331240254364" />
+      <entry key="S30" value="2.8020133392198012" />
+      <entry key="S60" value="4.556775335049213" />
+      <entry key="M2" value="6.750995719537559" />
+      <entry key="M5" value="10.08221326354674" />
+      <entry key="M10" value="12.358724129589818" />
+      <entry key="M15" value="13.389187011732439" />
+      <entry key="M30" value="14.82653215556667" />
+      <entry key="H1" value="17.051334908073677" />
+      <entry key="H2" value="24.085413072143712" />
+      <entry key="H4" value="49.543273086397946" />
+      <entry key="D1" value="418.88246657594624" />
+      <entry key="W1" value="794.6491571238297" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.5376163868264494E-17" />
-      <entry key="MS500" value="5.136214357111335E-4" />
-      <entry key="S2" value="0.18915905444493258" />
-      <entry key="S5" value="0.8556238350234489" />
-      <entry key="S10" value="1.5536141976721773" />
-      <entry key="S30" value="2.39196573841178" />
-      <entry key="S60" value="2.6763653030095633" />
-      <entry key="M2" value="2.833315718409973" />
-      <entry key="M5" value="3.003997252938436" />
-      <entry key="M10" value="3.502899209922339" />
-      <entry key="M15" value="4.166773114564835" />
-      <entry key="M30" value="5.967932386774575" />
-      <entry key="H1" value="8.187490659704963" />
-      <entry key="H2" value="11.928510352851157" />
-      <entry key="H4" value="25.360782563840406" />
-      <entry key="D1" value="173.49585751629476" />
-      <entry key="W1" value="286.5969815128605" />
+      <entry key="MS100" value="3.437141018889175E-11" />
+      <entry key="MS500" value="0.00807680486378311" />
+      <entry key="S2" value="0.30730897807378843" />
+      <entry key="S5" value="0.8070813050102343" />
+      <entry key="S10" value="1.3870340426571057" />
+      <entry key="S30" value="2.4480898128667725" />
+      <entry key="S60" value="3.424322687459042" />
+      <entry key="M2" value="4.67923042396824" />
+      <entry key="M5" value="6.4080985881147345" />
+      <entry key="M10" value="7.4542238250280795" />
+      <entry key="M15" value="7.903823217811842" />
+      <entry key="M30" value="8.510118118601982" />
+      <entry key="H1" value="9.300045580118713" />
+      <entry key="H2" value="10.922524469848803" />
+      <entry key="H4" value="16.96412636783719" />
+      <entry key="D1" value="147.61308001805548" />
+      <entry key="W1" value="289.44272774557123" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.902020969108211E-11" />
-      <entry key="MS500" value="0.009161151774663718" />
-      <entry key="S2" value="0.43928460695937926" />
-      <entry key="S5" value="1.3266135653005842" />
-      <entry key="S10" value="2.1798340238826963" />
-      <entry key="S30" value="3.222255253698763" />
-      <entry key="S60" value="3.583659086832139" />
-      <entry key="M2" value="3.792653376289394" />
-      <entry key="M5" value="4.747986314835983" />
-      <entry key="M10" value="9.513738407577637" />
-      <entry key="M15" value="15.825475551454163" />
-      <entry key="M30" value="31.834645271201147" />
-      <entry key="H1" value="49.47642661074931" />
-      <entry key="H2" value="71.10945686332417" />
-      <entry key="H4" value="127.44042069754146" />
-      <entry key="D1" value="664.4830175191597" />
-      <entry key="W1" value="1069.2997463168804" />
+      <entry key="MS100" value="0.0040440036087553794" />
+      <entry key="MS500" value="0.3323227655845595" />
+      <entry key="S2" value="0.927424130622391" />
+      <entry key="S5" value="1.7800841420299285" />
+      <entry key="S10" value="2.7246720113781864" />
+      <entry key="S30" value="5.060462706915424" />
+      <entry key="S60" value="7.821170786153021" />
+      <entry key="M2" value="11.311617876952132" />
+      <entry key="M5" value="16.422643341872128" />
+      <entry key="M10" value="19.77296797463189" />
+      <entry key="M15" value="21.264576516021208" />
+      <entry key="M30" value="23.321156563309206" />
+      <entry key="H1" value="26.342602851149287" />
+      <entry key="H2" value="35.00227472221431" />
+      <entry key="H4" value="66.50240859326698" />
+      <entry key="D1" value="566.4888608989727" />
+      <entry key="W1" value="1084.0900475534859" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -533,7 +534,8 @@
     <MESSAGE value="Cheiro de erros" />
     <MESSAGE value="Consertei os erros" />
     <MESSAGE value="Att" />
-    <option name="LAST_COMMIT_MESSAGE" value="Att" />
+    <MESSAGE value="Swagger já funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swagger já funcionando" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
