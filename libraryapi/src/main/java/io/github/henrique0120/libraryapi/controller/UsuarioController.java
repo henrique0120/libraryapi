@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.BadRequestException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("auth")
 @RequiredArgsConstructor
 @Tag(name = "Usuarios")
+@Slf4j
 public class UsuarioController {
 
     private final AuthenticationService authenticationService;
@@ -37,6 +39,7 @@ public class UsuarioController {
 
     })
     public ResponseEntity<Usuario> salvar(@RequestBody @Valid RegisterRequestDTO dto) throws BadRequestException {
+        log.info("Salvando novo usuário: {}", dto.getNome());
         //var a = mapper.toEntity(dto);
         authenticationService.criarUsuario(dto);
         return ResponseEntity.ok().build();

@@ -5,11 +5,15 @@ import io.github.henrique0120.libraryapi.controller.dto.LivroDTO;
 import io.github.henrique0120.libraryapi.controller.dto.ResultadoPesquisaLivroDTO;
 import io.github.henrique0120.libraryapi.model.Livro;
 import io.github.henrique0120.libraryapi.repository.AutorRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Mapper(componentModel = "spring", uses = AutorMapper.class)
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class LivroMapper {
 
     @Autowired

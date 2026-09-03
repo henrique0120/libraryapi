@@ -1,6 +1,9 @@
 spring:
   application:
     name: libraryapi
+  output:
+    ansi:
+      enabled: ALWAYS
   datasource:
     url: jdbc:postgresql://localhost:5432/library
     username: postgres
@@ -26,3 +29,29 @@ jwt:
 
 springdoc:
   override-with-generic-response: false
+
+logging:
+  file:
+    name: app.log
+  level:
+    root: warn
+    io:
+      github:
+        henrique0120: info
+    org:
+      springframework:
+        web: debug
+        security: trace
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# trace
+# debug
+# info
+# warn
+# error

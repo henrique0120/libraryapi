@@ -1,0 +1,749 @@
+2026-09-03T08:43:23.047-03:00  INFO 5652 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 5652 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T08:43:23.072-03:00  INFO 5652 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T08:43:29.385-03:00  WARN 5652 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T08:43:33.688-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T08:43:35.039-03:00 TRACE 5652 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@2f541e30}
+2026-09-03T08:43:35.055-03:00  INFO 5652 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T08:43:35.271-03:00  WARN 5652 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T08:43:35.542-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T08:43:35.555-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.556-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T08:43:35.556-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.557-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T08:43:35.557-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.557-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T08:43:35.557-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.558-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T08:43:35.558-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.558-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T08:43:35.559-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T08:43:35.559-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T08:43:35.730-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T08:43:35.755-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T08:43:35.834-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T08:43:35.926-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T08:43:36.069-03:00 DEBUG 5652 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T08:43:36.640-03:00  INFO 5652 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 15.673 seconds (process running for 17.762)
+2026-09-03T08:43:36.644-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T08:43:36.644-03:00  WARN 5652 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T08:44:54.796-03:00  INFO 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-03T08:44:54.797-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-03T08:44:54.797-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-03T08:44:54.798-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2be4189f
+2026-09-03T08:44:54.798-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@566f2599
+2026-09-03T08:44:54.801-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-03T08:44:54.801-03:00  INFO 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-09-03T08:44:54.813-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/7)
+2026-09-03T08:44:54.816-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/7)
+2026-09-03T08:44:54.816-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/7)
+2026-09-03T08:44:54.816-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/7)
+2026-09-03T08:44:54.816-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/7)
+2026-09-03T08:44:54.816-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/7)
+2026-09-03T08:44:54.818-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (7/7)
+2026-09-03T08:44:54.818-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-03T08:44:54.818-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T08:44:54.818-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T08:44:54.825-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T08:44:54.829-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T08:44:54.831-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T08:44:54.832-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T08:44:54.832-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T08:44:54.832-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T08:44:54.832-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T08:44:54.835-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing POST /auth/login
+2026-09-03T08:44:54.837-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /auth/login using org.springframework.security.authorization.SingleResultAuthorizationManager@218eb2f8
+2026-09-03T08:44:54.837-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-03T08:44:54.848-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/auth/login", parameters={}
+2026-09-03T08:44:54.863-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.UsuarioController#login(LoginRequestDTO)
+2026-09-03T08:44:55.034-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [io.github.henrique0120.libraryapi.controller.dto.LoginRequestDTO@ef21b86]
+2026-09-03T08:44:55.172-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.authentication.ProviderManager     : Authenticating request with DaoAuthenticationProvider (1/1)
+2026-09-03T08:44:55.832-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-03T08:44:56.156-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-03T08:44:56.160-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [TokenResponseDTO[token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZW5yaXF1ZUBlbWFpbC5jb20iLCJpYXQiOjE3ODg0MzU4 (truncated)...]
+2026-09-03T08:44:56.227-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T08:44:56.227-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T08:45:05.164-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/7)
+2026-09-03T08:45:05.164-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/7)
+2026-09-03T08:45:05.164-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/7)
+2026-09-03T08:45:05.164-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/7)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/7)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/7)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (7/7)
+2026-09-03T08:45:05.170-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /autores
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T08:45:05.170-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T08:45:05.322-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T08:45:05.322-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T08:45:05.322-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T08:45:05.323-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T08:45:05.323-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T08:45:05.324-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Did not set SecurityContextHolder since already authenticated UsernamePasswordAuthenticationToken [Principal=io.github.henrique0120.libraryapi.model.Usuario@14844b12, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[Roles(id=552d349f-45f4-405b-ab7c-0474a175b52f, nome=ROLE_OPERADOR)]]
+2026-09-03T08:45:05.324-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] s.CompositeSessionAuthenticationStrategy : Preparing session with ChangeSessionIdAuthenticationStrategy (1/1)
+2026-09-03T08:45:05.325-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T08:45:05.325-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T08:45:05.325-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing POST /autores
+2026-09-03T08:45:05.325-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /autores using org.springframework.security.authorization.AuthenticatedAuthorizationManager@33aa694a
+2026-09-03T08:45:05.326-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /autores
+2026-09-03T08:45:05.326-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/autores", parameters={}
+2026-09-03T08:45:05.326-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.AutorController#register(AutorDTO)
+2026-09-03T08:45:05.345-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AutorDTO[id=null, nome=Shakespeare, dataNascimento=1564-04-23, nacionalidade=Inglaterra]]
+2026-09-03T08:45:05.365-03:00  INFO 5652 --- [libraryapi] [http-nio-8080-exec-2] i.g.h.l.controller.AutorController       : Registrando autor: Shakespeare
+2026-09-03T08:45:05.583-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-03T08:45:05.583-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-09-03T08:45:05.585-03:00 DEBUG 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-09-03T08:45:05.585-03:00 TRACE 5652 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T10:18:23.742-03:00  INFO 27300 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 27300 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T10:18:23.755-03:00  INFO 27300 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T10:18:30.320-03:00  WARN 27300 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T10:18:35.438-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T10:18:37.064-03:00 TRACE 27300 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@2f9b9dda}
+2026-09-03T10:18:37.082-03:00  INFO 27300 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T10:18:37.353-03:00  WARN 27300 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T10:18:37.702-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T10:18:37.712-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.712-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T10:18:37.715-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.715-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T10:18:37.715-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.715-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T10:18:37.715-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.715-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T10:18:37.715-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.715-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T10:18:37.715-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:18:37.715-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T10:18:37.964-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T10:18:38.016-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T10:18:38.121-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T10:18:38.220-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T10:18:38.428-03:00 DEBUG 27300 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T10:18:39.328-03:00  INFO 27300 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 18.528 seconds (process running for 20.512)
+2026-09-03T10:18:39.333-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T10:18:39.333-03:00  WARN 27300 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T10:21:57.589-03:00  INFO 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-03T10:21:57.589-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-03T10:21:57.589-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-03T10:21:57.593-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@41618bdd
+2026-09-03T10:21:57.594-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@714b18f3
+2026-09-03T10:21:57.595-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-03T10:21:57.596-03:00  INFO 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-09-03T10:21:57.619-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/7)
+2026-09-03T10:21:57.619-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/7)
+2026-09-03T10:21:57.622-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/7)
+2026-09-03T10:21:57.622-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/7)
+2026-09-03T10:21:57.622-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/7)
+2026-09-03T10:21:57.623-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/7)
+2026-09-03T10:21:57.623-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (7/7)
+2026-09-03T10:21:57.624-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/salvar
+2026-09-03T10:21:57.625-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T10:21:57.627-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T10:21:57.635-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T10:21:57.638-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T10:21:57.642-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T10:21:57.642-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T10:21:57.642-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T10:21:57.644-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T10:21:57.644-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T10:21:57.648-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T10:21:57.650-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T10:21:57.650-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T10:21:57.654-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T10:21:57.654-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T10:21:57.654-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T10:21:57.656-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing POST /auth/salvar
+2026-09-03T10:21:57.658-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /auth/salvar using org.springframework.security.authorization.SingleResultAuthorizationManager@41d9b7f7
+2026-09-03T10:21:57.658-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/salvar
+2026-09-03T10:21:57.671-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/auth/salvar", parameters={}
+2026-09-03T10:21:57.697-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.UsuarioController#salvar(RegisterRequestDTO)
+2026-09-03T10:21:58.000-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO@32f75165]
+2026-09-03T10:21:58.101-03:00  INFO 27300 --- [libraryapi] [http-nio-8080-exec-1] i.g.h.l.controller.UsuarioController     : Salvando novo usuário: class io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO
+2026-09-03T10:21:58.983-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-03T10:21:58.984-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-09-03T10:21:58.988-03:00 DEBUG 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T10:21:58.990-03:00 TRACE 27300 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T10:25:23.455-03:00  INFO 13556 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 13556 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T10:25:23.468-03:00  INFO 13556 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T10:25:28.150-03:00  WARN 13556 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T10:25:33.075-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T10:25:34.679-03:00 TRACE 13556 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@48370090}
+2026-09-03T10:25:34.697-03:00  INFO 13556 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T10:25:34.922-03:00  WARN 13556 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T10:25:35.215-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T10:25:35.227-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.228-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T10:25:35.228-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.228-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T10:25:35.228-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.228-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T10:25:35.229-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.229-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T10:25:35.229-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.229-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T10:25:35.229-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:25:35.230-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T10:25:35.471-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T10:25:35.506-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T10:25:35.579-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T10:25:35.657-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T10:25:35.827-03:00 DEBUG 13556 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T10:25:36.561-03:00  INFO 13556 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 14.491 seconds (process running for 16.066)
+2026-09-03T10:25:36.567-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T10:25:36.568-03:00  WARN 13556 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T10:29:12.560-03:00  INFO 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-03T10:29:12.560-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-03T10:29:12.560-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-03T10:29:12.560-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4ff9a49c
+2026-09-03T10:29:12.560-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@64c7f67f
+2026-09-03T10:29:12.560-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-03T10:29:12.560-03:00  INFO 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/7)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (7/7)
+2026-09-03T10:29:12.580-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/salvar
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T10:29:12.580-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T10:29:12.593-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T10:29:12.593-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T10:29:12.598-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T10:29:12.604-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T10:29:12.604-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T10:29:12.610-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T10:29:12.610-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T10:29:12.610-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T10:29:12.610-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing POST /auth/salvar
+2026-09-03T10:29:12.612-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /auth/salvar using org.springframework.security.authorization.SingleResultAuthorizationManager@b122c2c
+2026-09-03T10:29:12.614-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/salvar
+2026-09-03T10:29:12.621-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/auth/salvar", parameters={}
+2026-09-03T10:29:12.633-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.UsuarioController#salvar(RegisterRequestDTO)
+2026-09-03T10:29:12.827-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO@2ff68877]
+2026-09-03T10:29:12.906-03:00  INFO 13556 --- [libraryapi] [http-nio-8080-exec-1] i.g.h.l.controller.UsuarioController     : Salvando novo usuário: jose
+2026-09-03T10:29:13.566-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-03T10:29:13.566-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-09-03T10:29:13.575-03:00 DEBUG 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T10:29:13.575-03:00 TRACE 13556 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T10:44:03.436-03:00  INFO 6700 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 6700 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T10:44:03.444-03:00  INFO 6700 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T10:44:07.093-03:00  WARN 6700 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T10:44:11.868-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T10:44:13.328-03:00 TRACE 6700 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@44080500}
+2026-09-03T10:44:13.347-03:00  INFO 6700 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T10:44:13.657-03:00  WARN 6700 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T10:44:14.023-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T10:44:14.040-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.041-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T10:44:14.041-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.041-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T10:44:14.041-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.041-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T10:44:14.041-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.043-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T10:44:14.043-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.044-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T10:44:14.045-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T10:44:14.045-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T10:44:14.404-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T10:44:14.451-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T10:44:14.526-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T10:44:14.605-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T10:44:14.798-03:00 DEBUG 6700 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T10:44:15.648-03:00  INFO 6700 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 13.321 seconds (process running for 14.792)
+2026-09-03T10:44:15.654-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T10:44:15.654-03:00  WARN 6700 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T11:20:30.009-03:00  INFO 856 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 856 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T11:20:30.019-03:00  INFO 856 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T11:20:37.448-03:00  WARN 856 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T11:20:42.633-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-03T11:20:42.635-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T11:20:44.646-03:00 TRACE 856 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@5f16ab0}
+2026-09-03T11:20:44.666-03:00  INFO 856 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T11:20:44.961-03:00  WARN 856 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T11:20:45.410-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T11:20:45.426-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.426-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T11:20:45.426-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.427-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T11:20:45.427-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.427-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T11:20:45.427-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.428-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T11:20:45.428-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.428-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T11:20:45.428-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.428-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T11:20:45.428-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:20:45.430-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-03T11:20:45.715-03:00 DEBUG 856 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T11:20:45.759-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T11:20:45.832-03:00 DEBUG 856 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T11:20:45.949-03:00 DEBUG 856 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T11:20:46.251-03:00 DEBUG 856 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T11:20:47.534-03:00  INFO 856 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 20.062 seconds (process running for 22.324)
+2026-09-03T11:20:47.686-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T11:20:47.687-03:00  WARN 856 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T11:24:00.087-03:00  INFO 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-03T11:24:00.091-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-03T11:24:00.092-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-03T11:24:00.105-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@203fb536
+2026-09-03T11:24:00.113-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d2b4d5
+2026-09-03T11:24:00.114-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-03T11:24:00.114-03:00  INFO 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2026-09-03T11:24:00.230-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:24:00.234-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:24:00.236-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:24:00.238-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:24:00.238-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:24:00.238-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:24:00.240-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:24:00.243-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : No security for GET /actuator
+2026-09-03T11:24:00.303-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator", parameters={}
+2026-09-03T11:24:00.419-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-09-03T11:24:00.430-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{_links={self=[Link@7cce7cf3 href = 'http://localhost:8080/actuator'], health=[Link@d47797b href = ' (truncated)...]
+2026-09-03T11:24:00.763-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T11:24:01.355-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:24:01.356-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:24:01.357-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:24:01.357-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:24:01.357-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:24:01.358-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:24:01.358-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:24:01.361-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (8/8)
+2026-09-03T11:24:01.363-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-03T11:24:01.371-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T11:24:01.383-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T11:24:01.385-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T11:24:01.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T11:24:01.395-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T11:24:01.396-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T11:24:01.397-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T11:24:01.398-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T11:24:01.399-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T11:24:01.406-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T11:24:01.409-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T11:24:01.410-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T11:24:01.419-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T11:24:01.420-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T11:24:01.422-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T11:24:01.427-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing GET /favicon.ico
+2026-09-03T11:24:01.428-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on GET /favicon.ico using org.springframework.security.authorization.AuthenticatedAuthorizationManager@3047f0af
+2026-09-03T11:24:01.439-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.a.ExceptionTranslationFilter     : Sending AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]] to authentication entry point since access is denied
+
+org.springframework.security.authorization.AuthorizationDeniedException: Access Denied
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:99) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at io.github.henrique0120.libraryapi.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:336) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-03T11:24:01.464-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T11:24:25.270-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:24:25.271-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : No security for GET /actuator/health
+2026-09-03T11:24:25.273-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-09-03T11:24:25.281-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-09-03T11:24:25.319-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-09-03T11:24:25.319-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.health.actuate.endpoint.SystemHealthDescriptor@4012b397]
+2026-09-03T11:24:25.332-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (8/8)
+2026-09-03T11:24:25.384-03:00 DEBUG 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-03T11:24:25.384-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T11:24:25.386-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] estMatcherDelegatingAuthorizationManager : Authorizing GET /favicon.ico
+2026-09-03T11:24:25.388-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] estMatcherDelegatingAuthorizationManager : Checking authorization on GET /favicon.ico using org.springframework.security.authorization.AuthenticatedAuthorizationManager@3047f0af
+2026-09-03T11:24:25.389-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.s.w.a.ExceptionTranslationFilter     : Sending AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]] to authentication entry point since access is denied
+
+org.springframework.security.authorization.AuthorizationDeniedException: Access Denied
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:99) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at io.github.henrique0120.libraryapi.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:336) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-03T11:24:25.392-03:00 TRACE 856 --- [libraryapi] [http-nio-8080-exec-4] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T11:26:47.023-03:00  INFO 18948 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 18948 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-03T11:26:47.031-03:00  INFO 18948 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-03T11:26:50.543-03:00  WARN 18948 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-03T11:26:53.911-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-03T11:26:53.913-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-03T11:26:55.056-03:00 TRACE 18948 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@74ea4d04}
+2026-09-03T11:26:55.070-03:00  INFO 18948 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-03T11:26:55.264-03:00  WARN 18948 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-03T11:26:55.532-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-03T11:26:55.543-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.544-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-03T11:26:55.544-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.544-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-03T11:26:55.544-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.545-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-03T11:26:55.546-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.546-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-03T11:26:55.546-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.546-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-03T11:26:55.547-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.547-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-03T11:26:55.547-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-03T11:26:55.547-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-03T11:26:55.714-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-03T11:26:55.743-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T11:26:55.840-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T11:26:55.922-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T11:26:56.056-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-03T11:26:57.387-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-03T11:26:57.390-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-03T11:26:57.398-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-03T11:26:57.423-03:00 DEBUG 18948 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-03T11:26:57.454-03:00  INFO 18948 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 11.577 seconds (process running for 12.879)
+2026-09-03T11:26:57.551-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-03T11:26:57.551-03:00  WARN 18948 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-03T11:30:30.466-03:00  INFO 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServletRegistration'
+2026-09-03T11:30:30.466-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-03T11:30:30.466-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-03T11:30:30.466-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b802293
+2026-09-03T11:30:30.475-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3fd79854
+2026-09-03T11:30:30.475-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-03T11:30:30.476-03:00  INFO 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2026-09-03T11:30:30.495-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:30:30.496-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:30:30.497-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:30:30.497-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:30:30.498-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:30:30.498-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:30:30.498-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:30:30.500-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : No security for GET /actuator
+2026-09-03T11:30:30.528-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator", parameters={}
+2026-09-03T11:30:30.556-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-09-03T11:30:30.561-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{_links={self=[Link@50c933c4 href = 'http://localhost:9090/actuator'], beans=[Link@6f6a745a href = ' (truncated)...]
+2026-09-03T11:30:30.655-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-03T11:30:30.768-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-03T11:30:30.769-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-03T11:30:30.770-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (8/8)
+2026-09-03T11:30:30.770-03:00 DEBUG 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-03T11:30:30.773-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-03T11:30:30.778-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-03T11:30:30.779-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-03T11:30:30.780-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-03T11:30:30.783-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-03T11:30:30.784-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-03T11:30:30.784-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-03T11:30:30.785-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-03T11:30:30.785-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-03T11:30:30.788-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-03T11:30:30.789-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-03T11:30:30.789-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-03T11:30:30.791-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-03T11:30:30.791-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-03T11:30:30.791-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-03T11:30:30.794-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing GET /favicon.ico
+2026-09-03T11:30:30.795-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on GET /favicon.ico using org.springframework.security.authorization.AuthenticatedAuthorizationManager@3ec84155
+2026-09-03T11:30:30.799-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.s.w.a.ExceptionTranslationFilter     : Sending AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]] to authentication entry point since access is denied
+
+org.springframework.security.authorization.AuthorizationDeniedException: Access Denied
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:99) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at io.github.henrique0120.libraryapi.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:336) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-03T11:30:30.812-03:00 TRACE 18948 --- [libraryapi] [http-nio-9090-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-03T13:02:09.833-03:00  WARN 18948 --- [libraryapi] [library-db-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : library-db-pool - Thread starvation or clock leap detected (housekeeper delta=37m17s963ms981µs800ns).
