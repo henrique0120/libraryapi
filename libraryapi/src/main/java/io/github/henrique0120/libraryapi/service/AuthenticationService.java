@@ -38,7 +38,7 @@ public class AuthenticationService {
         Optional<Usuario> var =  usuarioRepository.findByEmail(dto.getEmail());
 
         if (var.isPresent()){
-            throw new BadRequestException("Já existe um usuario cadastrado com esse e-mail.");
+            throw new BadRequestException("Já existe um usuario cadastrado com este e-mail.");
         }
 
         Roles role = rolesRepository.findByNome(RoleType.ROLE_OPERADOR.name())
