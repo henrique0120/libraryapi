@@ -1,271 +1,9 @@
-2026-09-22T09:00:51.403-03:00  INFO 24984 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 24984 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T09:00:51.447-03:00  INFO 24984 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T09:00:59.570-03:00  WARN 24984 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T09:01:00.874-03:00 ERROR 24984 --- [libraryapi] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2026-09-22T09:01:00.948-03:00  WARN 24984 --- [libraryapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-09-22T09:01:01.002-03:00 ERROR 24984 --- [libraryapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.context.ApplicationContextException: Unable to start web server
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
-	at io.github.henrique0120.libraryapi.Application.main(Application.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:429) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:167) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	... 11 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4420) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
-	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
-	... 16 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 56 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1710) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 70 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 84 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'hikariDatasource' defined in class path resource [io/github/henrique0120/libraryapi/config/DatabaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgresprod"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 96 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariDatasource' defined in class path resource [io/github/henrique0120/libraryapi/config/DatabaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgresprod"
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 108 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgresprod"
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 122 common frames omitted
-Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: password authentication failed for user "postgresprod"
-	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:610) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:597) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80) ~[HikariCP-7.0.2.jar:na]
-	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration.hikariDatasource(DatabaseConfiguration.java:48) ~[classes/:na]
-	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$0.CGLIB$hikariDatasource$1(<generated>) ~[classes/:na]
-	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.8.jar:7.0.8]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398) ~[spring-context-7.0.8.jar:7.0.8]
-	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$0.hikariDatasource(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 125 common frames omitted
-Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgresprod"
-	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:835) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:307) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:365) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:52) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:290) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.11.jar:42.7.11]
-	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.11.jar:42.7.11]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
-	... 136 common frames omitted
-
-2026-09-22T10:53:32.871-03:00  INFO 21020 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 21020 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T10:53:32.880-03:00  INFO 21020 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T10:53:38.620-03:00  WARN 21020 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T10:53:43.549-03:00  WARN 21020 --- [libraryapi] [restartedMain] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
-2026-09-22T10:53:43.550-03:00  WARN 21020 --- [libraryapi] [restartedMain] org.hibernate.orm.jdbc.warn              : constraint "ukk8si93wtslp275pv65gity1gg" of relation "livro" does not exist, skipping
-2026-09-22T10:53:43.559-03:00  WARN 21020 --- [libraryapi] [restartedMain] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
-2026-09-22T10:53:43.560-03:00  WARN 21020 --- [libraryapi] [restartedMain] org.hibernate.orm.jdbc.warn              : constraint "uk5171l57faosmj8myawaucatdw" of relation "usuario" does not exist, skipping
-2026-09-22T10:53:44.166-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-09-22T10:53:44.166-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-09-22T10:53:45.633-03:00 TRACE 21020 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@6da6bbca}
-2026-09-22T10:53:45.650-03:00  INFO 21020 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2026-09-22T10:53:45.889-03:00  WARN 21020 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-22T10:53:46.222-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-09-22T10:53:46.236-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.237-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
-2026-09-22T10:53:46.237-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.238-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
-2026-09-22T10:53:46.238-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.239-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
-2026-09-22T10:53:46.239-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.240-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
-2026-09-22T10:53:46.241-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.242-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
-2026-09-22T10:53:46.242-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.242-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
-2026-09-22T10:53:46.244-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T10:53:46.244-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
-2026-09-22T10:53:46.436-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
-2026-09-22T10:53:46.471-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T10:53:46.558-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T10:53:46.643-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T10:53:46.826-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-09-22T10:53:48.222-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-09-22T10:53:48.225-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T10:53:48.235-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T10:53:48.262-03:00 DEBUG 21020 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T10:53:48.294-03:00  INFO 21020 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 16.888 seconds (process running for 18.736)
-2026-09-22T10:53:48.419-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-22T10:53:48.419-03:00  WARN 21020 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-22T11:18:47.418-03:00  INFO 23380 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 23380 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T11:18:47.427-03:00  INFO 23380 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T11:18:53.059-03:00  WARN 23380 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T11:18:57.976-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-09-22T11:18:57.977-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-09-22T11:19:00.028-03:00 TRACE 23380 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@77971be6}
-2026-09-22T11:19:00.056-03:00  INFO 23380 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2026-09-22T11:19:00.390-03:00  WARN 23380 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-22T11:19:00.989-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-09-22T11:19:01.010-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.010-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
-2026-09-22T11:19:01.011-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.011-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
-2026-09-22T11:19:01.011-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.011-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
-2026-09-22T11:19:01.012-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.012-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
-2026-09-22T11:19:01.013-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.013-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
-2026-09-22T11:19:01.014-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.014-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
-2026-09-22T11:19:01.014-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:19:01.015-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
-2026-09-22T11:19:01.315-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
-2026-09-22T11:19:01.357-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T11:19:01.444-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T11:19:01.556-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T11:19:01.769-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-09-22T11:19:03.555-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-09-22T11:19:03.557-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T11:19:03.567-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T11:19:03.607-03:00 DEBUG 23380 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T11:19:03.655-03:00  INFO 23380 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 17.901 seconds (process running for 20.055)
-2026-09-22T11:19:03.814-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-22T11:19:03.815-03:00  WARN 23380 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-22T11:26:18.101-03:00  INFO 22808 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 22808 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T11:26:18.110-03:00  INFO 22808 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T11:26:22.979-03:00  WARN 22808 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T11:26:24.113-03:00 ERROR 22808 --- [libraryapi] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2026-09-22T11:26:24.159-03:00  WARN 22808 --- [libraryapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-09-22T11:26:24.204-03:00 ERROR 22808 --- [libraryapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2026-09-23T09:32:53.981-03:00  INFO 7812 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 7812 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T09:32:54.018-03:00  INFO 7812 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "develop"
+2026-09-23T09:33:00.684-03:00  WARN 7812 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T09:33:01.821-03:00 ERROR 7812 --- [libraryapi] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2026-09-23T09:33:01.875-03:00  WARN 7812 --- [libraryapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-09-23T09:33:01.915-03:00 ERROR 7812 --- [libraryapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.context.ApplicationContextException: Unable to start web server
 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
@@ -458,75 +196,483 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:365) ~[postgresql-42.7.11.jar:42.7.11]
 	... 145 common frames omitted
 
-2026-09-22T11:27:18.894-03:00  INFO 18984 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 18984 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T11:27:18.902-03:00  INFO 18984 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T11:27:37.410-03:00  WARN 18984 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T11:27:44.444-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-09-22T11:27:44.444-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-09-22T11:27:45.978-03:00 TRACE 18984 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@5ab949a6}
-2026-09-22T11:27:45.994-03:00  INFO 18984 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2026-09-22T11:27:46.242-03:00  WARN 18984 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-22T11:27:46.622-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-09-22T11:27:46.640-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.641-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
-2026-09-22T11:27:46.641-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.641-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
-2026-09-22T11:27:46.641-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.642-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
-2026-09-22T11:27:46.642-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.642-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
-2026-09-22T11:27:46.642-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.643-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
-2026-09-22T11:27:46.643-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.643-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
-2026-09-22T11:27:46.643-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T11:27:46.643-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
-2026-09-22T11:27:46.947-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
-2026-09-22T11:27:46.975-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T11:27:47.040-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T11:27:47.145-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T11:27:47.328-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-09-22T11:27:49.022-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-09-22T11:27:49.025-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T11:27:49.040-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T11:27:49.067-03:00 DEBUG 18984 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T11:27:49.125-03:00  INFO 18984 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 32.799 seconds (process running for 34.989)
-2026-09-22T11:27:49.351-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-22T11:27:49.352-03:00  WARN 18984 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-22T12:25:20.771-03:00  WARN 18984 --- [libraryapi] [library-db-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : library-db-pool - Thread starvation or clock leap detected (housekeeper delta=25m41s940ms373µs100ns).
-2026-09-22T14:21:34.373-03:00  INFO 7284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 7284 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
-2026-09-22T14:21:34.386-03:00  INFO 7284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "development"
-2026-09-22T14:21:39.765-03:00  WARN 7284 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-09-22T14:21:44.758-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-09-22T14:21:44.758-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-09-22T14:21:46.229-03:00 TRACE 7284 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@166b3230}
-2026-09-22T14:21:46.244-03:00  INFO 7284 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2026-09-22T14:21:46.501-03:00  WARN 7284 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-22T14:21:46.878-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-09-22T14:21:46.892-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.892-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
-2026-09-22T14:21:46.893-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.893-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
-2026-09-22T14:21:46.893-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.893-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
-2026-09-22T14:21:46.894-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.894-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
-2026-09-22T14:21:46.894-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.894-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
-2026-09-22T14:21:46.895-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.895-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
-2026-09-22T14:21:46.895-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-09-22T14:21:46.896-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
-2026-09-22T14:21:47.106-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
-2026-09-22T14:21:47.139-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T14:21:47.220-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T14:21:47.309-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T14:21:47.483-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-09-22T14:21:49.041-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-09-22T14:21:49.043-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-09-22T14:21:49.051-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-09-22T14:21:49.067-03:00 DEBUG 7284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22T14:21:49.099-03:00  INFO 7284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 16.579 seconds (process running for 18.473)
-2026-09-22T14:21:49.223-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-22T14:21:49.224-03:00  WARN 7284 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-22T17:11:58.297-03:00  WARN 7284 --- [libraryapi] [library-db-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : library-db-pool - Thread starvation or clock leap detected (housekeeper delta=8m45s198ms555µs).
+2026-09-23T10:39:30.283-03:00  INFO 22352 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 22352 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T10:39:30.291-03:00  INFO 22352 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "develop"
+2026-09-23T10:39:34.822-03:00  WARN 22352 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T10:39:39.219-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T10:39:39.219-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T10:39:40.333-03:00 TRACE 22352 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@51682f9b}
+2026-09-23T10:39:40.348-03:00  INFO 22352 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T10:39:40.556-03:00  WARN 22352 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T10:39:40.802-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T10:39:40.812-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.812-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T10:39:40.812-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.813-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T10:39:40.813-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.813-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T10:39:40.813-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.813-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T10:39:40.814-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.814-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T10:39:40.814-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.814-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T10:39:40.814-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:39:40.814-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T10:39:40.968-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:39:40.986-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:39:41.035-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:39:41.094-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:39:41.208-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T10:39:42.321-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:39:42.323-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:39:42.329-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:39:42.341-03:00 DEBUG 22352 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:39:42.363-03:00  INFO 22352 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 13.403 seconds (process running for 14.844)
+2026-09-23T10:39:42.455-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T10:39:42.455-03:00  WARN 22352 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T10:52:31.650-03:00  INFO 23284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 23284 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T10:52:31.656-03:00  INFO 23284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "develop"
+2026-09-23T10:52:35.539-03:00  WARN 23284 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T10:52:39.998-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T10:52:39.998-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T10:52:41.235-03:00 TRACE 23284 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@1a5a4dd6}
+2026-09-23T10:52:41.248-03:00  INFO 23284 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T10:52:41.472-03:00  WARN 23284 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T10:52:41.804-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T10:52:41.818-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.819-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T10:52:41.819-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.819-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T10:52:41.819-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.819-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T10:52:41.821-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.821-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T10:52:41.821-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.821-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T10:52:41.822-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.822-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T10:52:41.822-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:52:41.823-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T10:52:42.067-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:52:42.113-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:52:42.214-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:52:42.397-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:52:42.589-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T10:52:44.056-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:52:44.058-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:52:44.064-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:52:44.079-03:00 DEBUG 23284 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:52:44.112-03:00  INFO 23284 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 13.818 seconds (process running for 15.367)
+2026-09-23T10:52:44.224-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T10:52:44.225-03:00  WARN 23284 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T10:54:37.040-03:00  INFO 16100 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 16100 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T10:54:37.046-03:00  INFO 16100 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "production"
+2026-09-23T10:54:41.561-03:00  WARN 16100 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T10:54:44.772-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T10:54:44.773-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T10:54:45.694-03:00 TRACE 16100 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@1352e09b}
+2026-09-23T10:54:45.706-03:00  INFO 16100 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T10:54:45.876-03:00  WARN 16100 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T10:54:46.101-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T10:54:46.110-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.112-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T10:54:46.112-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.112-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T10:54:46.112-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.112-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T10:54:46.112-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.112-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T10:54:46.113-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.113-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T10:54:46.113-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.113-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T10:54:46.113-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:54:46.113-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T10:54:46.248-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:54:46.265-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:54:46.309-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:54:46.387-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:54:46.518-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T10:54:47.625-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:54:47.628-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:54:47.639-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:54:47.662-03:00 DEBUG 16100 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:54:47.701-03:00  INFO 16100 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 11.504 seconds (process running for 12.497)
+2026-09-23T10:54:47.793-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T10:54:47.793-03:00  WARN 16100 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T10:59:19.984-03:00  INFO 22628 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 22628 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T10:59:19.990-03:00  INFO 22628 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "production"
+2026-09-23T10:59:24.016-03:00  WARN 22628 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T10:59:27.651-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T10:59:27.652-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T10:59:29.214-03:00 TRACE 22628 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@4763dced}
+2026-09-23T10:59:29.227-03:00  INFO 22628 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T10:59:29.453-03:00  WARN 22628 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T10:59:29.733-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T10:59:29.743-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.743-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T10:59:29.743-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.743-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T10:59:29.744-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.744-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T10:59:29.744-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.744-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T10:59:29.745-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.745-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T10:59:29.745-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.745-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T10:59:29.745-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T10:59:29.746-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T10:59:29.918-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:59:29.938-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:59:30.013-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:59:30.094-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:59:30.224-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T10:59:31.306-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T10:59:31.308-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T10:59:31.315-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T10:59:31.331-03:00 DEBUG 22628 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T10:59:31.362-03:00  INFO 22628 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 12.629 seconds (process running for 14.45)
+2026-09-23T10:59:31.456-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T10:59:31.456-03:00  WARN 22628 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T11:00:32.906-03:00  INFO 21888 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 21888 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T11:00:32.913-03:00  INFO 21888 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : No active profile set, falling back to 1 default profile: "default"
+2026-09-23T11:00:38.726-03:00  WARN 21888 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T11:00:43.729-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T11:00:43.729-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T11:00:45.432-03:00 TRACE 21888 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@17ec48d2}
+2026-09-23T11:00:45.453-03:00  INFO 21888 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T11:00:45.727-03:00  WARN 21888 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T11:00:46.155-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T11:00:46.174-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.175-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T11:00:46.175-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.176-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T11:00:46.176-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.177-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T11:00:46.177-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.177-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T11:00:46.177-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.178-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T11:00:46.178-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.178-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T11:00:46.178-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:00:46.179-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T11:00:46.481-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T11:00:46.528-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T11:00:46.620-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T11:00:46.746-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T11:00:47.022-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T11:00:48.585-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T11:00:48.585-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T11:00:48.595-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T11:00:48.615-03:00 DEBUG 21888 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T11:00:48.652-03:00  INFO 21888 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 16.866 seconds (process running for 17.964)
+2026-09-23T11:00:48.758-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T11:00:48.758-03:00  WARN 21888 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T11:13:01.339-03:00  INFO 19216 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 19216 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T11:13:01.346-03:00  INFO 19216 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "production"
+2026-09-23T11:13:05.544-03:00  WARN 19216 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T11:13:06.759-03:00 ERROR 19216 --- [libraryapi] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2026-09-23T11:13:06.809-03:00  WARN 19216 --- [libraryapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-09-23T11:13:06.857-03:00 ERROR 19216 --- [libraryapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at io.github.henrique0120.libraryapi.Application.main(Application.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:429) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:167) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4420) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes\io\github\henrique0120\libraryapi\service\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository' defined in io.github.henrique0120.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1710) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 84 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'hikariDatasource' defined in class path resource [io/github/henrique0120/libraryapi/config/DatabaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgres"
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 96 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariDatasource' defined in class path resource [io/github/henrique0120/libraryapi/config/DatabaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgres"
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 108 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDatasource' threw exception with message: Failed to initialize pool: FATAL: password authentication failed for user "postgres"
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 122 common frames omitted
+Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: password authentication failed for user "postgres"
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:610) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:597) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80) ~[HikariCP-7.0.2.jar:na]
+	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration.hikariDatasource(DatabaseConfiguration.java:48) ~[classes/:na]
+	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$0.CGLIB$hikariDatasource$1(<generated>) ~[classes/:na]
+	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398) ~[spring-context-7.0.8.jar:7.0.8]
+	at io.github.henrique0120.libraryapi.config.DatabaseConfiguration$$SpringCGLIB$$0.hikariDatasource(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 125 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:835) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:307) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:365) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:52) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:290) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.11.jar:42.7.11]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	... 136 common frames omitted
+
+2026-09-23T11:13:58.706-03:00  INFO 22128 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 22128 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T11:13:58.711-03:00  INFO 22128 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "production"
+2026-09-23T11:14:02.066-03:00  WARN 22128 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T11:16:48.383-03:00  INFO 21448 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Starting Application using Java 21.0.12.1 with PID 21448 (C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\target\classes started by Henrique Souza in C:\Users\Henrique Souza\Desktop\spring\libraryapi)
+2026-09-23T11:16:48.391-03:00  INFO 21448 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : The following 1 profile is active: "production"
+2026-09-23T11:16:53.460-03:00  WARN 21448 --- [libraryapi] [restartedMain] com.zaxxer.hikari.HikariConfig           : library-db-pool - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-09-23T11:16:57.604-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-09-23T11:16:57.605-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-23T11:16:59.359-03:00 TRACE 21448 --- [libraryapi] [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=io.github.henrique0120.libraryapi.config.SecurityConfiguration$$SpringCGLIB$$0@27e73f1d}
+2026-09-23T11:16:59.373-03:00  INFO 21448 --- [libraryapi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-09-23T11:16:59.583-03:00  WARN 21448 --- [libraryapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-23T11:16:59.916-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-23T11:16:59.937-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v2/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.937-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v2/api-docs/**]
+2026-09-23T11:16:59.938-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/v3/api-docs/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.938-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/v3/api-docs/**]
+2026-09-23T11:16:59.938-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-resources/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.938-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-resources/**]
+2026-09-23T11:16:59.938-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui.html]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.938-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui.html]
+2026-09-23T11:16:59.940-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/swagger-ui/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.940-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/swagger-ui/**]
+2026-09-23T11:16:59.940-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/webjars/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.940-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/webjars/**]
+2026-09-23T11:16:59.941-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/actuator/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-09-23T11:16:59.941-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure PathPattern [/actuator/**]
+2026-09-23T11:17:00.138-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-09-23T11:17:00.178-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T11:17:00.264-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T11:17:00.341-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T11:17:00.489-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-23T11:17:01.948-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-09-23T11:17:01.950-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-09-23T11:17:01.958-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**, /swagger-ui/*index.html, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*index.html, /webjars/*swagger-ui/5.32.11/*index.html, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.11/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-09-23T11:17:01.973-03:00 DEBUG 21448 --- [libraryapi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-23T11:17:02.019-03:00  INFO 21448 --- [libraryapi] [restartedMain] i.g.henrique0120.libraryapi.Application  : Started Application in 15.028 seconds (process running for 16.651)
+2026-09-23T11:17:02.123-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-23T11:17:02.123-03:00  WARN 21448 --- [libraryapi] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-23T16:17:03.279-03:00  INFO 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-23T16:17:03.296-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-09-23T16:17:03.299-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-09-23T16:17:03.351-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51c9709d
+2026-09-23T16:17:03.355-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@14cf5b82
+2026-09-23T16:17:03.365-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-09-23T16:17:03.365-03:00  INFO 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 73 ms
+2026-09-23T16:17:03.542-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-23T16:17:03.562-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-23T16:17:03.573-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-23T16:17:03.575-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-23T16:17:03.576-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-23T16:17:03.578-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-23T16:17:03.580-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-23T16:17:03.586-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (8/8)
+2026-09-23T16:17:03.592-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/salvar
+2026-09-23T16:17:03.606-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-23T16:17:03.629-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-23T16:17:03.643-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-23T16:17:03.650-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-23T16:17:03.659-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-23T16:17:03.662-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-23T16:17:03.662-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-23T16:17:03.666-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-23T16:17:03.666-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-23T16:17:03.672-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-23T16:17:03.677-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-23T16:17:03.681-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-23T16:17:03.688-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-23T16:17:03.692-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-23T16:17:03.694-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-23T16:17:03.701-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing POST /auth/salvar
+2026-09-23T16:17:03.705-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /auth/salvar using org.springframework.security.authorization.SingleResultAuthorizationManager@47cf768c
+2026-09-23T16:17:03.720-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/salvar
+2026-09-23T16:17:03.745-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/auth/salvar", parameters={}
+2026-09-23T16:17:03.761-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.UsuarioController#salvar(RegisterRequestDTO)
+2026-09-23T16:17:04.274-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [io.github.henrique0120.libraryapi.controller.dto.RegisterRequestDTO@27f08139]
+2026-09-23T16:17:04.503-03:00  INFO 21448 --- [libraryapi] [http-nio-8080-exec-1] i.g.h.l.controller.UsuarioController     : Salvando novo usuário: jose
+2026-09-23T16:17:06.238-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-23T16:17:06.244-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-09-23T16:17:06.251-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-23T16:17:06.267-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-23T16:18:56.638-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v2/api-docs/**]] and having filters [] (1/8)
+2026-09-23T16:18:56.640-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/v3/api-docs/**]] and having filters [] (2/8)
+2026-09-23T16:18:56.643-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-resources/**]] and having filters [] (3/8)
+2026-09-23T16:18:56.646-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui.html]] and having filters [] (4/8)
+2026-09-23T16:18:56.648-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/swagger-ui/**]] and having filters [] (5/8)
+2026-09-23T16:18:56.648-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/webjars/**]] and having filters [] (6/8)
+2026-09-23T16:18:56.648-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain matching [PathPattern [/actuator/**]] and having filters [] (7/8)
+2026-09-23T16:18:56.648-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'securityFilterChain' in [class path resource [io/github/henrique0120/libraryapi/config/SecurityConfiguration.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Logout, JwtAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, SessionManagement, ExceptionTranslation, Authorization] (8/8)
+2026-09-23T16:18:56.650-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-23T16:18:56.650-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/12)
+2026-09-23T16:18:56.650-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/12)
+2026-09-23T16:18:56.650-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/12)
+2026-09-23T16:18:56.652-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/12)
+2026-09-23T16:18:56.667-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (5/12)
+2026-09-23T16:18:56.671-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [PathPattern [GET /logout], PathPattern [POST /logout], PathPattern [PUT /logout], PathPattern [DELETE /logout]]
+2026-09-23T16:18:56.671-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/12)
+2026-09-23T16:18:56.681-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/12)
+2026-09-23T16:18:56.682-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/12)
+2026-09-23T16:18:56.682-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/12)
+2026-09-23T16:18:56.682-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (10/12)
+2026-09-23T16:18:56.684-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-09-23T16:18:56.684-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-09-23T16:18:56.684-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (11/12)
+2026-09-23T16:18:56.686-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (12/12)
+2026-09-23T16:18:56.688-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] estMatcherDelegatingAuthorizationManager : Authorizing POST /auth/login
+2026-09-23T16:18:56.688-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /auth/login using org.springframework.security.authorization.SingleResultAuthorizationManager@47cf768c
+2026-09-23T16:18:56.690-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-23T16:18:56.694-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/auth/login", parameters={}
+2026-09-23T16:18:56.696-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to io.github.henrique0120.libraryapi.controller.UsuarioController#login(LoginRequestDTO)
+2026-09-23T16:18:57.038-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [io.github.henrique0120.libraryapi.controller.dto.LoginRequestDTO@92048f0]
+2026-09-23T16:18:57.061-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.s.authentication.ProviderManager     : Authenticating request with DaoAuthenticationProvider (1/1)
+2026-09-23T16:18:57.864-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-23T16:18:58.312-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-09-23T16:18:58.325-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [TokenResponseDTO[token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsImlhdCI6MTc5MDE5MTEzNywi (truncated)...]
+2026-09-23T16:18:58.418-03:00 DEBUG 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-09-23T16:18:58.427-03:00 TRACE 21448 --- [libraryapi] [http-nio-8080-exec-3] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-09-23T17:27:55.868-03:00  WARN 21448 --- [libraryapi] [library-db-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : library-db-pool - Thread starvation or clock leap detected (housekeeper delta=3m26s49ms305µs400ns).

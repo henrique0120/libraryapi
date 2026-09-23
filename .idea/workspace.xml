@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Começando variaveis de ambiente">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Tentando banco produção mas não funciona kkkkkkkkk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.log.2026-09-03.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,15 +75,15 @@
       <entry key="S30" value="1.0" />
       <entry key="S60" value="1.0" />
       <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0000000000165963" />
-      <entry key="M10" value="1.0000168546299395" />
-      <entry key="M15" value="1.001727005397117" />
-      <entry key="M30" value="1.2010376215413032" />
-      <entry key="H1" value="3.8176630886301286" />
-      <entry key="H2" value="14.373702826609788" />
-      <entry key="H4" value="38.25282125572392" />
-      <entry key="D1" value="347.7749716259236" />
-      <entry key="W1" value="874.0412551320738" />
+      <entry key="M5" value="1.0000015207981614" />
+      <entry key="M10" value="1.004798294561824" />
+      <entry key="M15" value="1.0713473317673452" />
+      <entry key="M30" value="2.0667275396851656" />
+      <entry key="H1" value="5.2060513427937956" />
+      <entry key="H2" value="11.176245954855185" />
+      <entry key="H4" value="26.847874614452326" />
+      <entry key="D1" value="311.7929428832539" />
+      <entry key="W1" value="870.8796916142874" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -88,37 +91,37 @@
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
-      <entry key="S30" value="7.265385943970311E-247" />
-      <entry key="S60" value="8.523723331954351E-124" />
-      <entry key="M2" value="2.9195416304540605E-62" />
-      <entry key="M5" value="2.432909022176718E-25" />
-      <entry key="M10" value="4.932452759325566E-13" />
-      <entry key="M15" value="6.242741501333317E-9" />
-      <entry key="M30" value="7.908992072508599E-5" />
-      <entry key="H1" value="0.009851876709062167" />
-      <entry key="H2" value="0.22671444107811492" />
-      <entry key="H4" value="2.3086094839237195" />
-      <entry key="D1" value="96.1856627796173" />
-      <entry key="W1" value="285.4404130394631" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="2.6686399707662942E-225" />
+      <entry key="M2" value="5.1658880850888524E-113" />
+      <entry key="M5" value="1.2169087036866701E-45" />
+      <entry key="M10" value="3.4884218548610936E-23" />
+      <entry key="M15" value="1.0676266225018457E-15" />
+      <entry key="M30" value="3.270718456274011E-8" />
+      <entry key="H1" value="2.0034567845132487E-4" />
+      <entry key="H2" value="0.032330296661981596" />
+      <entry key="H4" value="0.8717977184603363" />
+      <entry key="D1" value="81.77512512963351" />
+      <entry key="W1" value="278.89811962565085" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7791645796604998" />
-      <entry key="MS500" value="0.9513182763317992" />
-      <entry key="S2" value="0.9876008614453725" />
-      <entry key="S5" value="0.9950217729511135" />
-      <entry key="S10" value="0.9975077808975293" />
-      <entry key="S30" value="0.999168569213607" />
-      <entry key="S60" value="0.9995841981612189" />
-      <entry key="M2" value="0.9997920774647191" />
-      <entry key="M5" value="0.9999168258140834" />
-      <entry key="M10" value="0.9999752608917993" />
-      <entry key="M15" value="1.001698900298865" />
-      <entry key="M30" value="1.2010831317971529" />
-      <entry key="H1" value="3.827399291257129" />
-      <entry key="H2" value="14.600137086091676" />
-      <entry key="H4" value="40.560628809889764" />
-      <entry key="D1" value="443.95619765422333" />
-      <entry key="W1" value="1159.4798393290357" />
+      <entry key="MS100" value="0.7684375906440062" />
+      <entry key="MS500" value="0.9486843151404539" />
+      <entry key="S2" value="0.9869165458858419" />
+      <entry key="S5" value="0.9947459325778691" />
+      <entry key="S10" value="0.9973695065410157" />
+      <entry key="S30" value="0.9991223988885992" />
+      <entry key="S60" value="0.999561103129068" />
+      <entry key="M2" value="0.9997805274804406" />
+      <entry key="M5" value="0.9999137253646936" />
+      <entry key="M10" value="1.0047532694279806" />
+      <entry key="M15" value="1.0713066491405616" />
+      <entry key="M30" value="2.0666261230124663" />
+      <entry key="H1" value="5.206072750677821" />
+      <entry key="H2" value="11.2083654910342" />
+      <entry key="H4" value="27.719250223036003" />
+      <entry key="D1" value="393.56426967832823" />
+      <entry key="W1" value="1149.7760203727646" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -172,12 +175,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
-        <env name="DATASOURCE_PASSWORD" value="postgres" />
-        <env name="DATASOURCE_URL" value="jdbc:postgresql://localhost:5432/library" />
-        <env name="DATASOURCE_USERNAME" value="postgres" />
-        <env name="SPRING_PROFILES_ACTIVE" value="development" />
+        <env name="DATASOURCE_PASSWORD" value="postgresprod" />
+        <env name="DATASOURCE_URL" value="jdbc:postgresql://localhost:5434/library" />
+        <env name="DATASOURCE_USERNAME" value="postgresprod" />
+        <env name="SPRING_PROFILES_ACTIVE" value="production" />
       </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="libraryapi" />
@@ -192,11 +195,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Application" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -510,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Criando método PUT para Livro" />
     <MESSAGE value="Código mais limpo para tratativa de erros" />
     <MESSAGE value="Livro Mapper" />
     <MESSAGE value="Specification" />
@@ -535,7 +532,8 @@
     <MESSAGE value="Swagger já funcionando" />
     <MESSAGE value="Log terminado" />
     <MESSAGE value="Começando variaveis de ambiente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Começando variaveis de ambiente" />
+    <MESSAGE value="Tentando banco produção mas não funciona kkkkkkkkk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tentando banco produção mas não funciona kkkkkkkkk" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
