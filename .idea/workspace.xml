@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Tentando banco produção mas não funciona kkkkkkkkk">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Banco produção funcionando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/comandos-docker.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryapi/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/AutorMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/LivroMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/RolesMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/io/github/henrique0120/libraryapi/controller/mappers/UsuarioMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +63,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0000015207981614" />
-      <entry key="M10" value="1.004798294561824" />
-      <entry key="M15" value="1.0713473317673452" />
-      <entry key="M30" value="2.0667275396851656" />
-      <entry key="H1" value="5.2060513427937956" />
-      <entry key="H2" value="11.176245954855185" />
-      <entry key="H4" value="26.847874614452326" />
-      <entry key="D1" value="311.7929428832539" />
-      <entry key="W1" value="870.8796916142874" />
+      <entry key="MS500" value="1.0000000003528742" />
+      <entry key="S2" value="1.0063534226328215" />
+      <entry key="S5" value="1.2581831647700257" />
+      <entry key="S10" value="1.9817437791938608" />
+      <entry key="S30" value="3.485333743107065" />
+      <entry key="S60" value="4.3552942999573325" />
+      <entry key="M2" value="7.4776840967421565" />
+      <entry key="M5" value="21.859985744415706" />
+      <entry key="M10" value="39.48368876781848" />
+      <entry key="M15" value="49.80575066012896" />
+      <entry key="M30" value="64.04633593405359" />
+      <entry key="H1" value="73.21269600167265" />
+      <entry key="H2" value="79.40710782091675" />
+      <entry key="H4" value="89.37904212263292" />
+      <entry key="D1" value="339.72630249696886" />
+      <entry key="W1" value="930.7247376338066" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -92,36 +87,36 @@
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
-      <entry key="S60" value="2.6686399707662942E-225" />
-      <entry key="M2" value="5.1658880850888524E-113" />
-      <entry key="M5" value="1.2169087036866701E-45" />
-      <entry key="M10" value="3.4884218548610936E-23" />
-      <entry key="M15" value="1.0676266225018457E-15" />
-      <entry key="M30" value="3.270718456274011E-8" />
-      <entry key="H1" value="2.0034567845132487E-4" />
-      <entry key="H2" value="0.032330296661981596" />
-      <entry key="H4" value="0.8717977184603363" />
-      <entry key="D1" value="81.77512512963351" />
-      <entry key="W1" value="278.89811962565085" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="2.1208930082910023E-174" />
+      <entry key="M5" value="3.393184731900244E-70" />
+      <entry key="M10" value="1.84205991543955E-35" />
+      <entry key="M15" value="6.97486646153498E-24" />
+      <entry key="M30" value="2.643634511549403E-12" />
+      <entry key="H1" value="1.8011882471625963E-6" />
+      <entry key="H2" value="0.00306548540309422" />
+      <entry key="H4" value="0.26844820817713827" />
+      <entry key="D1" value="67.19887682606935" />
+      <entry key="W1" value="271.18502261653015" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7684375906440062" />
-      <entry key="MS500" value="0.9486843151404539" />
-      <entry key="S2" value="0.9869165458858419" />
-      <entry key="S5" value="0.9947459325778691" />
-      <entry key="S10" value="0.9973695065410157" />
-      <entry key="S30" value="0.9991223988885992" />
-      <entry key="S60" value="0.999561103129068" />
-      <entry key="M2" value="0.9997805274804406" />
-      <entry key="M5" value="0.9999137253646936" />
-      <entry key="M10" value="1.0047532694279806" />
-      <entry key="M15" value="1.0713066491405616" />
-      <entry key="M30" value="2.0666261230124663" />
-      <entry key="H1" value="5.206072750677821" />
-      <entry key="H2" value="11.2083654910342" />
-      <entry key="H4" value="27.719250223036003" />
-      <entry key="D1" value="393.56426967832823" />
-      <entry key="W1" value="1149.7760203727646" />
+      <entry key="MS100" value="0.8950250709279725" />
+      <entry key="MS500" value="0.978063473789664" />
+      <entry key="S2" value="1.0007538671947487" />
+      <entry key="S5" value="1.2526962609789634" />
+      <entry key="S10" value="1.971173086116037" />
+      <entry key="S30" value="3.474547320342533" />
+      <entry key="S60" value="4.347173830925226" />
+      <entry key="M2" value="7.468907089538884" />
+      <entry key="M5" value="21.850699536402107" />
+      <entry key="M10" value="39.47671526896397" />
+      <entry key="M15" value="49.80037650713799" />
+      <entry key="M30" value="64.04321313917613" />
+      <entry key="H1" value="73.2110092630496" />
+      <entry key="H2" value="79.40927608484223" />
+      <entry key="H4" value="89.64691296987591" />
+      <entry key="D1" value="406.9219822244309" />
+      <entry key="W1" value="1201.9080080498875" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -508,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Código mais limpo para tratativa de erros" />
     <MESSAGE value="Livro Mapper" />
     <MESSAGE value="Specification" />
     <MESSAGE value="Specifications e Paginação finalizados" />
@@ -533,7 +527,8 @@
     <MESSAGE value="Log terminado" />
     <MESSAGE value="Começando variaveis de ambiente" />
     <MESSAGE value="Tentando banco produção mas não funciona kkkkkkkkk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tentando banco produção mas não funciona kkkkkkkkk" />
+    <MESSAGE value="Banco produção funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Banco produção funcionando" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
