@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Banco produção funcionando">
+    <list default="true" id="ed86d3bb-ecd9-4074-9d19-b1bbde043387" name="Changes" comment="Dockerfile">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraryapi.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +37,12 @@
     &quot;assignee&quot;: &quot;henrique0120&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/henrique0120/libraryapi.git&quot;,
-    &quot;accountId&quot;: &quot;51cbc324-d1a1-408e-8bde-e8a9c0dae292&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/henrique0120/libraryapi.git",
+    "accountId": "77cbf641-e302-42ce-b653-6aa9fd714a64"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/7.1.0/spring-security-config-7.1.0-sources.jar!/org/springframework/security/config/core/GrantedAuthorityDefaults.java" root0="SKIP_INSPECTION" />
   </component>
@@ -60,23 +64,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000030804" />
-      <entry key="MS500" value="1.004985659253238" />
-      <entry key="S2" value="1.2657239185896383" />
-      <entry key="S5" value="1.5885349512227975" />
-      <entry key="S10" value="1.7671603165067895" />
-      <entry key="S30" value="1.9154375231498006" />
-      <entry key="S60" value="1.9567849931671204" />
-      <entry key="M2" value="1.9781540847199233" />
-      <entry key="M5" value="2.012075551407559" />
-      <entry key="M10" value="3.2224270463998352" />
-      <entry key="M15" value="6.951299408285514" />
-      <entry key="M30" value="22.422742096050758" />
-      <entry key="H1" value="43.82453985521876" />
-      <entry key="H2" value="62.70624125714816" />
-      <entry key="H4" value="80.91004591665761" />
-      <entry key="D1" value="335.47199539618276" />
-      <entry key="W1" value="931.4723810796493" />
+      <entry key="MS100" value="1.4400802624160036" />
+      <entry key="MS500" value="3.2120416081411833" />
+      <entry key="S2" value="6.616575854944598" />
+      <entry key="S5" value="8.367420529710037" />
+      <entry key="S10" value="9.126945942269026" />
+      <entry key="S30" value="9.695222131374203" />
+      <entry key="S60" value="9.845813736811367" />
+      <entry key="M2" value="9.922451839899617" />
+      <entry key="M5" value="9.972810112995928" />
+      <entry key="M10" value="10.12700583282101" />
+      <entry key="M15" value="10.85923725065122" />
+      <entry key="M30" value="17.92571128027627" />
+      <entry key="H1" value="36.061006624794885" />
+      <entry key="H2" value="58.356812431802034" />
+      <entry key="H4" value="81.05223773680322" />
+      <entry key="D1" value="338.2862372668297" />
+      <entry key="W1" value="938.5956067528588" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -86,35 +90,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="4.7952186592989035E-182" />
-      <entry key="M5" value="2.9670397604912027E-73" />
-      <entry key="M10" value="5.44705403005965E-37" />
-      <entry key="M15" value="6.6697238225672065E-25" />
-      <entry key="M30" value="8.174993005997929E-13" />
-      <entry key="H1" value="1.0016179363537884E-6" />
-      <entry key="H2" value="0.002285971158650421" />
-      <entry key="H4" value="0.2318175206539082" />
-      <entry key="D1" value="65.57570556405753" />
-      <entry key="W1" value="270.2394161989961" />
+      <entry key="M2" value="8.134347365863874E-189" />
+      <entry key="M5" value="5.809370643354359E-76" />
+      <entry key="M10" value="2.410263604596718E-38" />
+      <entry key="M15" value="8.3440409030763E-26" />
+      <entry key="M30" value="2.8914898781648883E-13" />
+      <entry key="H1" value="5.956885279170063E-7" />
+      <entry key="H2" value="0.0017629066596734793" />
+      <entry key="H4" value="0.20357551515074052" />
+      <entry key="D1" value="64.17110529604095" />
+      <entry key="W1" value="269.4048089173398" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.02555943933011792" />
-      <entry key="MS500" value="0.48314510654473947" />
-      <entry key="S2" value="1.0634928459113688" />
-      <entry key="S5" value="1.4857688199362598" />
-      <entry key="S10" value="1.709972044908976" />
-      <entry key="S30" value="1.8947841331537607" />
-      <entry key="S60" value="1.9462372873671325" />
-      <entry key="M2" value="1.9728231699032133" />
-      <entry key="M5" value="2.009917007020195" />
-      <entry key="M10" value="3.221075670319855" />
-      <entry key="M15" value="6.949917841390287" />
-      <entry key="M30" value="22.42117473573423" />
-      <entry key="H1" value="43.82320415903055" />
-      <entry key="H2" value="62.70762210301941" />
-      <entry key="H4" value="81.14123527671929" />
-      <entry key="D1" value="401.0445576544846" />
-      <entry key="W1" value="1201.7100477923093" />
+      <entry key="MS100" value="1.2902677146944401" />
+      <entry key="MS500" value="3.095215500902897" />
+      <entry key="S2" value="6.524044313582428" />
+      <entry key="S5" value="8.31595145615313" />
+      <entry key="S10" value="9.098011119448216" />
+      <entry key="S30" value="9.684772914578442" />
+      <entry key="S60" value="9.840482182459057" />
+      <entry key="M2" value="9.919758820411916" />
+      <entry key="M5" value="9.971722075583893" />
+      <entry key="M10" value="10.126403024218266" />
+      <entry key="M15" value="10.858702158171768" />
+      <entry key="M30" value="17.92497565572003" />
+      <entry key="H1" value="36.06012159522334" />
+      <entry key="H2" value="58.35783198375166" />
+      <entry key="H4" value="81.25523894952973" />
+      <entry key="D1" value="402.4542628066605" />
+      <entry key="W1" value="1207.9986710471742" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -129,39 +133,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;JavaMethodFindUsagesOptions.isSearchForBaseMethod&quot;: &quot;false&quot;,
-    &quot;Maven.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.libraryapi [install,--non-recursive].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Henrique Souza/Desktop/spring/libraryapi/libraryapi/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "JavaMethodFindUsagesOptions.isSearchForBaseMethod": "false",
+    "Maven.Application.executor": "Run",
+    "Maven.libraryapi [clean,compile].executor": "Run",
+    "Maven.libraryapi [clean,install].executor": "Run",
+    "Maven.libraryapi [install,--non-recursive].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/henrique.souza/Desktop/spring/libraryapi",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Henrique Souza\Desktop\spring\libraryapi\libraryapi\src\main\resources" />
@@ -501,8 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Livro Mapper" />
-    <MESSAGE value="Specification" />
     <MESSAGE value="Specifications e Paginação finalizados" />
     <MESSAGE value="Começando com Basic Auth" />
     <MESSAGE value="Form login" />
@@ -526,7 +528,9 @@
     <MESSAGE value="Começando variaveis de ambiente" />
     <MESSAGE value="Tentando banco produção mas não funciona kkkkkkkkk" />
     <MESSAGE value="Banco produção funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Banco produção funcionando" />
+    <MESSAGE value="Fazendo imagem docker sla o que" />
+    <MESSAGE value="Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
