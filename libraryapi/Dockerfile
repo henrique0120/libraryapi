@@ -2,7 +2,7 @@
 FROM maven:4.0.0-rc-5-amazoncorretto-21-al2023 as build
 WORKDIR /build
 
-COPY . .
+COPY .. .
 
 RUN mvn clean package -DskipTests
 
